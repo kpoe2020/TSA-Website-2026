@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sleep.css">
+<script src="Script2.js"></script>
+</head>
+<body>
+    <img src="clinton.jpg" alt="" srcset="" width="100%">
+    <style>
+        h1{color: darkorchid;}
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Request Form</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+    
+   <img src="white.png" height="30px">
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="your name"><br>
+    </form>
+        
+     <form>
+        <label for="Lname">Last name:</label><br>
+        <input type="text" id="Lname" name="lname" placeholder="your last name"><br>
+    </form>
+       
+    <form><label for="Email">Email:</label><br>
+        <input type="text" id="Email" name="Email" placeholder="your email"><br></form>
+      
+    <form><label for="Servicename">Service name</label><br>
+       <input type="text" id="Servicename" name="Servicename" placeholder="name of service"><br></form>
+       
+    <form><label for="ServiceType"> Service type</label><br>
+       <div class="box">
+        <input type="text" id="ServiceType" list="Services" placeholder="select a service type"><br>
+        <datalist id="Services"><br>
+        <option>Education & Childcare</option><br>
+        <option>Government & Community Services</option><br>
+        <option>Utilities & Communications</option><br>
+        <option>Health, Wellness & Beauty</option><br>
+        <option>Non-Profits & community Outreach</option><br>
+        <option>Home, Auto & Maintenance</option><br>
+       <option>Banks</option><br>
+        <option>other</option><br>
+    </datalist></form>
+         <form><label for="Servicedesc">Description</label><br>
+            <input type="text" id="Servicedesc" name="Servicedesc" placeholder="what your service does and website name"><br></form>
+            
+            <form><input type="submit" id="Submit"
+              placeholder="Submit"></form>
+   
+   
+<style>
+    .disk{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background:url("art3.jpg") center/cover;
+        cursor: pointer;
+    }
+    .disk.playing {
+        animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg) ;}
+        to { transform: rotate(360deg);}
+    }
+    </style>
+
+    <audio id="audio" src="[prod. Frozy x warheart].mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<a href="https://youtu.be/UTbWGBZJ32U?si=t8pGLwEJiraXcCG5" target="_blank"> [Prod. frozy x warheart]</a>
+    <script>
+        const audio = document.getElementById("audio");
+        const disk = document.querySelector(".disk");
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                disk.classList.add("playing");
+            } else {
+                audio.pause();
+                disk.classList.remove("playing");
+            }
+        }
+    </script>
+    
+</body>
+</html>

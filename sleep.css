@@ -1,0 +1,67 @@
+*{
+margin: 0;
+padding: 0;
+}
+nav ul{
+float: center;
+margin-left: 40px;
+}
+form {
+    font-size: 30px;
+    color: dodgerblue;
+    text-decoration: none;
+}
+h1{
+    font-size: 48px;
+    text-decoration: none;
+    color: darkorchid;
+}
+a{
+    font-size: 30px;
+    color: dodgerblue;
+    text-decoration: none;
+}
+ a:hover {
+    color: rgb(208, 66, 208);
+    text-decoration: underline;
+ }
+ label:hover {
+      color: rgb(208, 66, 208);
+    text-decoration: underline;
+
+ }
+ #Submit:hover {
+      background-color: rgb(208, 66, 208);
+ }
+#fname{
+    width: 350px;
+    padding: 8px;
+}
+#Lname{
+    width: 350px;
+    padding: 8px;
+}
+#Email {
+    width: 350px;
+    padding: 8px;
+}
+#Servicename {
+    width: 350px;
+    padding: 8px;
+}
+#ServiceType {
+    width: 350px;
+    padding: 8px;
+}
+#Servicedesc {
+    width: 350px;
+    padding: 8px;
+}
+#Submit {
+    padding: 8px;
+    background-color: dodgerblue;
+}
+body{
+
+   cursor: url(carrot.jpeg), auto;
+}
