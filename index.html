@@ -5,20 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services in Clinton, MS Website</title>
     <link rel="stylesheet" href="style.css">
-<script src="Script2.js"></script>
+<script src="index.js"></script>
+
 </head>
+<style>
+/* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+            align-items: center;
+        justify-content: center;
+        display: flex;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+            justify-content: center;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+          display: flex;  
+          width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #333;
+            align-items: center;
+            justify-content: center;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        /* Search Box Styles */
+        .searchBox {
+       
+            
+            margin-top: 20px;
+            width: 45%;
+            border-color: black;
+           border-width: 15px;
+           border-style: solid;
+           font-weight: bold;
+          
+        }
+
+        input {
+       
+            width: 45%;
+            border-radius: 10px;
+          border: black solid;
+            margin-right: 10px;
+            color: black;
+            font-weight: bold;
+            background-color: dodgerblue;
+            
+            
+        }
+        input:hover{
+           background-color:rgb(208, 66, 208);
+        }
+        ::placeholder {
+          color: black;
+        }
+        
+
+        #button {
+            padding: 10px 20px;
+          border-style: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .hub {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 50px;
+        }
+
+  
+        
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 <body>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1300px">
+  <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
   
 
-<div class="Service-container"><div class="Service-card"><h1><a href="home.html">History</a></h1></h1><img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px"><h1><a href="Contact.html"> Get in touch! with us to add some rescouses</a></h1><img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg"  height="5px" width="30px"><h1><a href="Services.html"> Reference</a></h1></div></div>
+<div class="Service-container"><div class="Service-card"><h1><a href="home.html">History</a></h1></h1><h1><a href="Contact.html"> Get in touch! with us to add some rescouses</a></h1><h1><a href="Services.html"> Reference</a></h1></div></div>
 
+<div class="Service-container1"><div class="Service-card1"><h3><a href="education_&_childcare.html">Education & Childcare Services</a></h3><h3><a href="Government_&_Community_Services.html">Government & Community Services</a></h3><h3><a href="Utilities_&_Internet_Providers.html">Utilites & Internet Providers Services</a></h3><h3><a href="banks.html">Banks</a></h3><h3><a href="health.html">Health & Pharmacies Services</a></h3><h3><a href="non-profits.html">Non-Profits & Community Outreach Services</a></h3><h3><a href="auto.html">Home & Car Services</a></h3><h3><a href="beauty.html">Barbershops and Salons</a></h3><h3><a href="construction.html">Construion Services That Serve Clinton, MS</a></h3></div></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://cdn.shopify.com/s/files/1/0079/1714/2097/products/265851193f6f4125866ee693f837769b.jpg?v=1698069475" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
 
+        <audio id="bgMusic" loop preload="auto">
+            <source src="rxse.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div class="Service-card3"><audio controls><source src="rxse.mp3" type="audio/mpeg" loop>Your browser does not support the audio element.</audio><a href="https://youtu.be/6G-iGF9FmmE?si=JSGRdTy8Ypi-4xoH" target="_blank">Beat by @rxse on YouTube</a></div>
 
-  <h1><img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="25%" height="5px">Clinton, MS community resource hub<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="25%" height="5px"></h1>
+      
 
-  <div class="box">
-        <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="30px" height="5px"><input type="text" id="resourceSearch" list="resources" placeholder="Search for a resource...">
+  <h1 class="hub">Clinton, MS community resource hub</h1>
+
+  <div  id="serachBox" class="box">
+        <input type="text" id="resourceSearch" list="resources" placeholder="Search for a resource...">
         
         <datalist id="resources">
             <option value="Goodwill" data-url="https://www.goodwillms.org">
@@ -74,9 +203,35 @@
               <option value="Clinton Public School Transportation" data-url="https://www.clintonpublicschools.com/departments/transportation/">
               <option value="Clinton Public Works department" data-url="https://clintonms.org/public-works-2/">
               <option value="Fire Department of Clinton" data-url="https://clintonms.org/fire-department/">
-                <option value="Police Department of Clinton" data-url="https://clintonms.org/police-department/">
-                  <option value="Mississippi College" data-url="https://www.mc.edu">
-               </datalist>
+              <option value="Police Department of Clinton" data-url="https://clintonms.org/police-department/">
+              <option value="Mississippi College" data-url="https://www.mc.edu">
+              <option value="Trust Care" data-url="https://trustcarehealth.com/mental">
+              <option value="Red River Counseling - Mississippi" data-url="https://redrivercounseling.net/newclients?gad_source=1&gad_campaignid=21000471558&gbraid=0AAAAAC8rwbWAQGiWA2ZZ4RUrQUntEq0xZ&gclid=Cj0KCQiA8KTNBhD_ARIsAOvp6DJv6gZ0Q2lE9xkLGTY5x43qH_R8fHlNaMw2HQJbbccWnFld9HAhk_YaAnSPEALw_wcB">
+              <option value="Clinton Pharmacy" data-url="https://www.clintonpharmacyms.com">
+              <option value="CVS Pharmacy" data-url="https://www.cvs.com/pharmacy?cid=ps_cor_txt_cs_as_nb&gclsrc=aw.ds&gad_source=1&gad_campaignid=19278628792&gclid=CjwKCAiAtq_NBhA_EiwA78nNWBtzJqYRio53edIW2rhQPBjlCQmRwzrePDbV5hniqMrVISg802kkzRoCRugQAvD_BwE">
+              <option value="Kroger Pharmacy" data-url="https://www.kroger.com/stores/pharmacy/ms/clinton/025/00474">
+              <option value="Parkway Pharmacy" data-url="https://www.parkwaypharmacyclinton.com">
+              <option value="Walmart Pharmacy" data-url="https://www.walmart.com/store/1710-clinton-ms/pharmacy/?veh=seo_loc">
+             <option value="Parkway Dental of Clinton" data-url="https://www.mattkchowdds.com">
+              <option value="Northside Dental Group" data-url="https://www.northsidedentalgroup.com">
+              <option value="Walmart Auto Center" data-url="https://www.walmart.com/store/1710-clinton-ms/auto-care-center/?veh=seo_loc"> 
+              <option value="Mavis Tires & Brakes - Clinton" data-url="https://www.mavis.com/locations/clinton-ms/?utm_id=go_cmp-22406683891_adg-176967796466_ad-774878840867_kwd-341461820147_dev-m_ext-_prd-_mca-_sig-Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB&utm_source=google&ef_id=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB:G:s&gad_source=1&gad_campaignid=22406683891&gclid=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB">
+              <option value="Rapid Oil Change Inc" data-url="https://oilchangems.com">
+              <option value="Take 5 Oil Change" data-url="https://www.take5.com/locations/oil-change/mississippi/clinton/31160/?utm_source=google&utm_medium=organic&utm_campaign=gbp_website"> 
+            <option value="Main Street Clinton" data-url="https://mainstreetclintonms.com">
+            <option value="Magnolia Charitable Foundation" data-url="https://www.dot-consulting.org/articles/foundations-of-modern-higher-education.html?psystem=PW&domain=magnoliacharitablefoundation.com&oref=https%3A%2F%2Fwww.google.com%2">             
+            <option value="Clinton Visitor Center" data-url="https://clintonms.org/visitor-center-2/">           
+            <option value="Pinelake Church" data-url="https://pinelake.org/location/clinton">   
+            <option value="Mississippi HomeCare of Clinton" data-url="https://lhcgroup.com/locations/mississippi-homecare-of-clinton/?utm_source=GMB&utm_campaign=Google_Local_Listing&utm_medium=referral&utm_content=Mississippi_HomeCare_of_Clinton_Clinton_MS_39056">
+            <option value="Mississippi Center for Police and Sheriffs" data-url="https://www.mscps.org">
+          <option value="Mississppi Department of Child Protection Services" data-url="https://www.mdcps.ms.gov">
+<option value="Optical 2000" data-url="https://www.optical-2000.com">
+  <option value="Huntcliff Veterinary Clinc" data-url="https://huntcliffvet.com">
+    <option value="Ferriss Michael DVM" data-url="https://pet.ltheme.com/explore/ferriss-michael-dvm/#google_vignette">
+      <option value="Nicholas Acoustics & Specialty Co." data-url="https://www.nicholasacoustics.com">
+        <option value="Puckett Machinery Company" data-url="https://puckettmachinery.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=flowood">
+          <option value="Fountain Construction Co. Inc." data-url="https://fountainconstruction.com">
+</datalist>
         <script>
         function navigateToResource() {
             const input = document.getElementById('resourceSearch');
@@ -96,16 +251,62 @@
 
         <button type="button" id="button" onclick="navigateToResource()">Go</button>
     </div>
+   <script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>
 
 
   <ul class="resource-list">
     <li class="resource">
-         <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="15px" height="200px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQFPpf-IZ9s0ThkkRC4rN6lEmjnRjYaPlblLmQHdgX6A&s" width="200">  
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQFPpf-IZ9s0ThkkRC4rN6lEmjnRjYaPlblLmQHdgX6A&s" width="200">  
       <h4><a href= "https://www.hello4cs.org" target="_blank">Clinton Community Christian Corporation</a></h4>
     </li>
 
     <li class="resource">
-        <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="200px" width="15px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-XLoHcZPgnVahUzLGYT2n55g9KkxPLvtLdu7S-HGHw&s=10" width="200px" height="300px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-XLoHcZPgnVahUzLGYT2n55g9KkxPLvtLdu7S-HGHw&s=10" width="200px" height="300px">
       <h4><a href="https://www.goodwillms.org" target="_blank"> Goodwill</a></h4>
       
 
@@ -113,136 +314,152 @@
 
     </li>
     <li class="resource">
-        <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="200px" width="15px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxXzgadQ_ab4eEhVSy73V59PVDHDId1J5oDLRh7JtUorLr9kTbciByFs&s=10" height="200px" width="200">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxXzgadQ_ab4eEhVSy73V59PVDHDId1J5oDLRh7JtUorLr9kTbciByFs&s=10" height="200px" width="200">
       <h4><a href="https://www.dor.ms.gov" target="_blank">Mississippi Department of Revenue</a></h4>
     </li>
   </ul>
  
-<style>
-    .disk{
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background:url("https://cdn.shopify.com/s/files/1/0079/1714/2097/products/265851193f6f4125866ee693f837769b.jpg?v=1698069475") center/cover;
-        cursor: pointer;
-    }
-    .disk.playing {
-        animation: spin 3s linear infinite;
-    } 
-    @keyframes spin {
-        from { transform: rotate(0deg) ;}
-        to { transform: rotate(360deg);}
-    }
-    </style>
 
-    <audio id="audio" src="@rxse on youtube .mp3" loop></audio>
-    <div class="disk" onclick="togglePlay()"></div>
-    <script>
-        const audio = document.getElementById("audio");
-        const disk = document.querySelector(".disk");
-
-        function togglePlay() {
-            if (audio.paused) {
-                audio.play();
-                disk.classList.add("playing");
-            } else {
-                audio.pause();
-                disk.classList.remove("playing");
-            }
-        }
-    </script>
-    <a href="https://youtu.be/6G-iGF9FnnE?si=JSGRdTy8Ypi-4xoH" target="_blank">Thanks @rxse on youtube for letting me use your beat</a>
-
-<h2><img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="25%" height="5px">Clinton Services directory<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="25%" height="5px"></h2>
+<h2 class="directory">Clinton Services directory</h2>
 <details>
   <summary>Education & Childcare</summary>
   <ul>
-    <li><a href="https://funtimeclinton.com" target="_blank">Funtime Pre-School of Cliton</a></li>
-    <li><a href="https://funtimeclinton.com" target="_blank">My First Funtime</a></li>
-    <li><a href="https://funtimeclinton.com" target="_blank">Funtime After-School of Clinton, Inc.</a></li>
-    <li><a href="https://www.clintonpublicschools.com/" target="_blank">Clinton Public School District</a></li>
-    <li><a href="https://www.ccawarriors.ms" target="_blank">Clinton Christian Academy</a></li>
-    <li><a href="https://www.facebook.com/Kidz1stLevelLearning2/" target="_blank">1st Level Learning Center II</a></li>
-    <li><a href="https://www.dyslexia.mc.edu" target="_blank">Dyslexia Center</a></li>
-    <li><a href="https://www.clintonpublicschools.com/departments/transportation/" target="_blank">Clinton Public School Transportation</a></li>
-    <li><a href="https://www.mc.edu" target="_blank">Mississippi College</a></li>
+    <li><a href="https://funtimeclinton.com" target="_blank">•Funtime Pre-School of Clinton</a></li>
+    <li><a href="https://funtimeclinton.com" target="_blank">•My First Funtime</a></li>
+    <li><a href="https://funtimeclinton.com" target="_blank">•Funtime After-School of Clinton, Inc.</a></li>
+    <li><a href="https://www.clintonpublicschools.com/" target="_blank">•Clinton Public School District</a></li>
+    <li><a href="https://www.ccawarriors.ms" target="_blank">•Clinton Christian Academy</a></li>
+    <li><a href="https://www.facebook.com/Kidz1stLevelLearning2/" target="_blank">•1st Level Learning Center II</a></li>
+    <li><a href="https://www.dyslexia.mc.edu" target="_blank">•Dyslexia Center</a></li>
+    <li><a href="https://www.clintonpublicschools.com/departments/transportation/" target="_blank">•Clinton Public School Transportation</a></li>
+    <li><a href="https://www.mc.edu" target="_blank">•Mississippi College</a></li>
+  </ul>
 </details>
 <details>
   <Summary>Government & Community Services</Summary>
   <ul>
-    <li><a href="https://clintonms.org/" target="_blank">City of Clinton</a></li>
-    <li><a href="https://clintonms.org/" target="_blank">Water Department of Clinton</a></li>
-    <li><a href="https://www.dor.ms.gov" target="_blank">Mississippi Department of Revenue</a></li>
-    <li><a href="https://www.clintonchamber.org" target="_blank">Clinton Chamber of Commerce</a></li>
-    <li><a href="https://metroymcams.org/clinton-branch" target="_blank">Clinton Branch YMCA</a></li>
-    <li><a href="https://www.jhlibary.org/viit-us/quinsenberry-libary" target="_blank">The Quisenberry Libary</a></li>
-    <li><a href="https://msinstitute.com" target="_blank">Mississippi Institute of Aesthetics, Nails, and Cosmetology</a></li>
-     <li><a href="https://clintonms.org/public-works-2/" target="_blank">Clinton Public Works Department</a></li>
-    <li><a href="https://clintonms.org/fire-department/" target="_blank">Fire Department of Clinton</a></li>
-    <li><a href="https://clintonms.org/police-department/" target="_blank">Police Department of Clinton</a></li>
+    <li><a href="https://clintonms.org/" target="_blank">•City of Clinton</a></li>
+    <li><a href="https://clintonms.org/" target="_blank">•Water Department of Clinton</a></li>
+    <li><a href="https://www.dor.ms.gov" target="_blank">•Mississippi Department of Revenue</a></li>
+    <li><a href="https://www.clintonchamber.org" target="_blank">•Clinton Chamber of Commerce</a></li>
+    <li><a href="https://metroymcams.org/clinton-branch" target="_blank">•Clinton Branch YMCA</a></li>
+    <li><a href="https://www.jhlibary.org/viit-us/quinsenberry-libary" target="_blank">•The Quisenberry Libary</a></li>
+    <li><a href="https://msinstitute.com" target="_blank">•Mississippi Institute of Aesthetics, Nails, and Cosmetology</a></li>
+     <li><a href="https://clintonms.org/public-works-2/" target="_blank">•Clinton Public Works and Utilites Department</a></li>
+    <li><a href="https://clintonms.org/fire-department/" target="_blank">•Fire Department of Clinton</a></li>
+    <li><a href="https://clintonms.org/police-department/" target="_blank">•Police Department of Clinton</a></li>
+    <li><a href="https://clintonms.org/visitor-center-2/" target="_blank">•Clinton Visitor Center</a></li>
+    <li><a href="https://clintonms.org" target="_blank">•Clinton City Hall</a></li>
+<li><a href="https://www.mdcps.ms.gov" target="_blank">•Mississippi Department of Child Protective Services</a></li>
   </ul>
 </details>
 <details>
   <summary>Utilities & Internet Providers</summary>
   <ul>
-    <li><a href="https://www.entergy.com" target="_blank">Entergy Clinton, MS KAST Center</a></li>
-    <li><a href="https://www.atmosenergy.com/" target="_blank">Atmos Energy</a></li>
-    <li><a href="https://www.wm.com/us/en/location/ms/clinton/trash-pickup-clinton-ms" target="_blank">Waste Management</a></li>
-    <li><a href="https://cspire.com" target="_blank">Cspire</a></li>
-    <li><a href="https://www.att.com" target="_blank">AT&T</a></li>
-   <li><a href="https://www.xfinity.com" target="_blank">Xfinity</a></li>
-    <li><a href="https://wwwmt-mobile.com" target="_blank">T-Mobile</a></li>
+    <li><a href="https://www.entergy.com" target="_blank">•Entergy Clinton, MS KAST Center</a></li>
+    <li><a href="https://www.atmosenergy.com/" target="_blank">•Atmos Energy</a></li>
+    <li><a href="https://www.wm.com/us/en/location/ms/clinton/trash-pickup-clinton-ms" target="_blank">•Waste Management</a></li>
+    <li><a href="https://cspire.com" target="_blank">•Cspire</a></li>
+    <li><a href="https://www.att.com" target="_blank">•AT&T</a></li>
+   <li><a href="https://www.xfinity.com" target="_blank">•Xfinity</a></li>
+    <li><a href="https://wwwmt-mobile.com" target="_blank">•T-Mobile</a></li>
   </ul>
 </details>
 <details>
   <summary>Banks</summary>
   <ul>
-   <li><a href="https://www.renasantbank.com/locations/clinton?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=Clinton" target="_blank">Renasant Bank</a></li>
-    <li><a href="https://cadencebank.com/find-a-location/cadence-clinton-branch" target="_blank">Cadence Bank</a></li>
-    <li><a href="https://www.trustmark.com/locations/ms/clinton/clinton.html?scrlybrkr=6700c509" target="_blank">Trustmark</a></li>
-    <li><a href="https://www.regions.com/locator/ms/clinton/full-service-branch-609-highway-80-e?cid=localListing_google" target="_blank">Regions Bank</a></li>
-    <li><a href="https://www.bankplus.net/locations/browse-locations/mississippi/clinton/clinton-blvd/?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=clinton-blvd" target="_blank">BankPlus</a></li>
-    <li><a href="https://mpbank.net" target="_blank">Merchants & Planters Bank</a></li>
-    <li><a href="https://www.woodforest.com/" target="_blank">Woodforest National Bank</a></li>
-    <li><a href="https://copiahbank.com" target="_blank">Copiah Bank</a></li>
+   <li><a href="https://www.renasantbank.com/locations/clinton?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=Clinton" target="_blank">•Renasant Bank</a></li>
+    <li><a href="https://cadencebank.com/find-a-location/cadence-clinton-branch" target="_blank">•Cadence Bank</a></li>
+    <li><a href="https://www.trustmark.com/locations/ms/clinton/clinton.html?scrlybrkr=6700c509" target="_blank">•Trustmark</a></li>
+    <li><a href="https://www.regions.com/locator/ms/clinton/full-service-branch-609-highway-80-e?cid=localListing_google" target="_blank">•Regions Bank</a></li>
+    <li><a href="https://www.bankplus.net/locations/browse-locations/mississippi/clinton/clinton-blvd/?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=clinton-blvd" target="_blank">•BankPlus</a></li>
+    <li><a href="https://mpbank.net" target="_blank">•Merchants & Planters Bank</a></li>
+    <li><a href="https://www.woodforest.com/" target="_blank">•Woodforest National Bank</a></li>
+    <li><a href="https://copiahbank.com" target="_blank">•Copiah Bank</a></li>
     </ul>
 </details>
 <details>
-  <summary>Health, Wellness & Beauty</summary>
+  <summary>Health, Wellness, Pharmacy, Dental Clinics, & Veterinary Clinics</summary>
   <ul>
-     <li><a href="https://www.hcpls.org" target="_blank">Baptist Healthplex</a></li>
-    <li><a href="https://www.animalhospitalclinton.com/" target="_blank">Animal Hospital of Clinton</a></li>
-    <li><a href="https://standforhope.org" target="_blank">The Center for Children and Families: Counseling Services</a></li>
-    <li><a href="https://Tomasbarbershop.com" target="_blank">Tomas' Barbershop</a></li>
-    <li><a href="https://www.styleseat.com/m/v/torrancegreen" target="_blank">The Fresh Pimp Lair</a></li>
-    <li><a href="https://www.thevaultsalonms.com" target="_blank">The Vault Salon MS </a></li>
-     <li><a href="https://www.facebook.com/jillianssalon759/" target="_blank">Jillan's Salon</a></li>
-    <li><a href="https://bloomx.glossgenius.com" target="_blank">Bloom X Beauty Lounge</a></li>
-    <li><a href="https://luxedayspams.com" target="_blank">Luxe Day Spa</a></li>
-    <li><a href="https://Fivestarspa.favesalon.com" target="_blank">Five Star & Nail</a></li>
+     <li><a href="https://www.hcpls.org" target="_blank">•Baptist Healthplex</a></li>
+    <li><a href="https://www.animalhospitalclinton.com/" target="_blank">•Animal Hospital of Clinton</a></li>
+    <li><a href="https://standforhope.org" target="_blank">•The Center for Children and Families: Counseling Services</a></li>
+    <li><a href="https://www.belllifesafety.com" target="_blank">•Bell Life Safety</a></li>
+    <li><a href="https://trustcarehealth.com/mental" target="_blank">•Trust Care</a></li>
+    <li><a href="https://redrivercounseling.net/newclients?gad_source=1&gad_campaignid=21000471558&gbraid=0AAAAAC8rwbWAQGiWA2ZZ4RUrQUntEq0xZ&gclid=Cj0KCQiA8KTNBhD_ARIsAOvp6DJv6gZ0Q2lE9xkLGTY5x43qH_R8fHlNaMw2HQJbbccWnFld9HAhk_YaAnSPEALw_wcB" target="_blank">•Red River Counseling - Mississippi</a></li>
+    <li><a href="https://www.clintonpharmacyms.com" target="_blank">•Clinton Pharmacy</a></li>
+    <li><a href="https://www.cvs.com/pharmacy?cid=ps_cor_txt_cs_as_nb&gclsrc=aw.ds&gad_source=1&gad_campaignid=19278628792&gclid=CjwKCAiAtq_NBhA_EiwA78nNWBtzJqYRio53edIW2rhQPBjlCQmRwzrePDbV5hniqMrVISg802kkzRoCRugQAvD_BwE" target="_blank">•CVS Pharmacy</a></li>
+    <li><a href="https://www.walgreens.com/locator/walgreens-204+highway+80+e-clinton-ms-39056/id=5165" target="_blank">•Walgreens Pharmacy</a></li>
+    <li><a href="https://www.kroger.com/stores/pharmacy/ms/clinton/025/00474" target="_blank">•Kroger Pharmacy</a></li>
+    <li><a href="https://www.walmart.com/store/1710-clinton-ms/pharmacy/?veh=seo_loc" target="_blank">•Walmart Pharmacy</a></li>
+    <li><a href="https://www.parkwaypharmacyclinton.com" target="_blank">•Parkway Pharmacy</a></li>
+    <li><a href="https://www.afdclinton.com" target="_blank">•Alford Family Denistry</a></li>
+    <li><a href="https://www.mattkchowdds.com" target="_blank">•Parkway Dental Of Clinton</a></li>
+    <li><a href="https://www.northsidedentalgroup.com" target="_blank">•Northside Dental Group</a></li>
+    <li><a href="https://lhcgroup.com/locations/mississippi-homecare-of-clinton/?utm_source=GMB&utm_campaign=Google_Local_Listing&utm_medium=referral&utm_content=Mississippi_HomeCare_of_Clinton_Clinton_MS_39056" target="_blank">•Mississippi HomeCare of Clinton</a></li>
+    <li><a href="https://www.optical-2000.com" target="_blank">•Optical 2000</a></li>
+    <li><a href="https://huntcliffvet.com" target="_blank">•Huntcliff Veterinary Clinic</a></li>
+    <li><a href="https://pet.ltheme.com/explore/ferriss-michael-dvm/#google_vignette" target="_blank">•Ferriss Michael DVM</a></li>
+
+
+
   </ul>
 </details>
 <details>
   <Summary>Non-Profits & Community Outreach</Summary>
   <ul>
-    <li><a href="https://www.goodwillms.org" target="_blank">Goodwill</a></li>
-    <li><a href="https://www.hello4cs.org" target="_blank">Clinton Community Christian Corporation</a></li>
-    <li><a href="https://www.amvets.org" target="_blank">AMVETS Drop Box</a></li>
-    <li><a href="https://www.myadultdaycare.com/details/Reaching-Our-Community-Youth-and-Adult-Daycare" target="_blank">Reaching Our Community Youth and Adult Daycare</a></li>
+    <li><a href="https://www.goodwillms.org" target="_blank">•Goodwill</a></li>
+    <li><a href="https://www.hello4cs.org" target="_blank">•Clinton Community Christian Corporation</a></li>
+    <li><a href="https://www.amvets.org" target="_blank">•AMVETS Drop Box</a></li>
+    <li><a href="https://www.myadultdaycare.com/details/Reaching-Our-Community-Youth-and-Adult-Daycare" target="_blank">•Reaching Our Community Youth and Adult Daycare</a></li>
+    <li><a href="https://mainstreetclintonms.com" target="">•Main Street Clinton</a></li>
+    <li><a href="https://www.dot-consulting.org/articles/foundations-of-modern-higher-education.html?psystem=PW&domain=magnoliacharitablefoundation.com&oref=https%3A%2F%2Fwww.google.com%2F" target="_blank">•Magnolia Charitable Foundation</a></li>
+    <li><a href="https://pinelake.org/location/clinton" target="_blank">•Pinelake Church</a></li>
+    <li><a href="https://www.mscps.org" target="_blank">•Mississippi enter for Police and Sheriffs</a></li>
+
+
    </ul>
 </details>
 <details>
   <Summary>Home, Auto & Maintenance</Summary>
   <ul>
-     <li><a href="https://goshineexpress.com" target="_blank">Goshine Express Car Wash</a></li>
-    <li><a href="https://mistercarwash.com" target="_blank">Mister Car Wash</a></li>
-    <li><a href="https://www.magnolialawnandland.com" target="_blank">Magnolia Lawn & Land</a></li>
-    <li><a href="https://modestmowing.co" target="_blank">Modest Mowing</a></li>
-    <li><a href="https://sslawncare.co" target="_blank">Southern Style Lawn Care</a></li>
-    <li><a href="https://www.belllifesafety.com" target="_blank">Bell Life Safety</a></li>
-    <li><a href="https://www.estimates123.com" target="_blank">Estimates123</a></li>
+     <li><a href="https://goshineexpress.com" target="_blank">•Goshine Express Car Wash</a></li>
+    <li><a href="https://mistercarwash.com" target="_blank">•Mister Car Wash</a></li>
+    <li><a href="https://www.magnolialawnandland.com" target="_blank">•Magnolia Lawn & Land</a></li>
+    <li><a href="https://modestmowing.co" target="_blank">•Modest Mowing</a></li>
+    <li><a href="https://sslawncare.co" target="_blank">•Southern Style Lawn Care</a></li>
+    <li><a href="https://www.estimates123.com" target="_blank">•Estimates123</a></li>
+    <li><a href="https://www.walmart.com/store/1710-clinton-ms/auto-care-center/?veh=seo_loc" target="_blank">•Walmart Auto Center</a></li>
+    <li><a href="https://www.mavis.com/locations/clinton-ms/?utm_id=go_cmp-22406683891_adg-176967796466_ad-774878840867_kwd-341461820147_dev-m_ext-_prd-_mca-_sig-Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB&utm_source=google&ef_id=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB:G:s&gad_source=1&gad_campaignid=22406683891&gclid=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB" target="_blank">•Mavis Tires & Brakes - Clinton</a></li>
+    <li><a href="https://oilchangems.com" target="_blank">•Rapid Oil Change Inc</a></li>
+    <li><a href="https://www.take5.com/locations/oil-change/mississippi/clinton/31160/?utm_source=google&utm_medium=organic&utm_campaign=gbp_website" target="_blank">•Take 5 Oil Change</a></li>
+
   </ul>
 </details>
+<details>
+<summary>Barbershop & Salons</summary>
+<ul>
+      <li><a href="https://Tomasbarbershop.com" target="_blank">•Tomas' Barbershop</a></li>
+    <li><a href="https://www.styleseat.com/m/v/torrancegreen" target="_blank">•The Fresh Pimp Lair</a></li>
+    <li><a href="https://www.thevaultsalonms.com" target="_blank">•The Vault Salon MS </a></li>
+     <li><a href="https://www.facebook.com/jillianssalon759/" target="_blank">•Jillan's Salon</a></li>
+    <li><a href="https://bloomx.glossgenius.com" target="_blank">•Bloom X Beauty Lounge</a></li>
+    <li><a href="https://luxedayspams.com" target="_blank">•Luxe Day Spa</a></li>
+    <li><a href="https://Fivestarspa.favesalon.com" target="_blank">•Five Star & Nail</a></li>
 
+
+</ul>
+</details>
+  <details>
+    <summary>Constsruction Services</summary>
+    <ul>
+      <li><a href="https://www.nicholasacoustics.com" target="_blank">•Nicholas Acoustics & Specialty Co.</a></li>
+      <li><a href="https://puckettmachinery.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=flowood" target="_blank">•Puckett Machinery Company</a></li>
+      <li><a href="https://fountainconstruction.com" target="_blank">•Fountain Construction Co. Inc.</a></li>
+    </ul>
+  </details>
+
+
+ 
 </body>
 </html>

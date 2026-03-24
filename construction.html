@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+    /* Music Player Styles */
+
+        
+       .player {
+            margin-bottom: 30px;
+            align-items: center;
+        justify-content: center;
+        display: flex;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: flex;
+            border: 5px solid #00ffff;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #00ffff;
+        }
+        #return{
+            padding-bottom: 50px;
+        }
+        #construction{
+  padding-top: 50px;        
+   
+        }
+        
+
+      
+
+     
+
+
+       @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Click to Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                    alert("Click again to play!");
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    });
+</script>
+
+
+  <div id="return" class="tab-content">
+  <h1>Construction Services that serve Clinton, MS</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+
+
+  <div class="player">
+    <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+        <img src="https://f4.bcbits.com/img/a3936153671_10.jpg" 
+             alt="Vinyl record" class="vinyl" id="vinyl" />
+        <span class="label" id="label">Click to Play</span>
+    </button>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="Air.mp3" type="audio/mpeg" />
+    </audio>
+</div>
+
+<div class="Service-card3">
+    <audio controls>
+ <source src="Air.mp3" type="audio/mpeg" loop>
+ Your browser does not support the audio element.
+</audio>
+    <a href="https://youtu.be/2wQhohtDx-Y?si=m3qlz-iY46BydrtR" target="_blank">thank you Airbourn06</a>
+</div>
+
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    <div class="tab-content2" id="df"></div>
+   <h2>Construction Services</h2>
+    <li><a href="https://www.nicholasacoustics.com" target="_blank">Nicholas Acoustics & Specialty Co.</a></li>
+        <div class="Service-card2"><li><a href="https://www.nicholasacoustics.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiOar2PmU1AZoZqKuuUyNWGFrZ98frguN8hw&s" alt="" height="150px" width="150px"></a></li><li><p>•Nicholas Acoustics & Specialty Co. is a long-standing specialty contracting firm based in Central Mississippi. Established in 1957, the company has spent over 60 years providing interior construction and finishing services for a wide range of commercial and industrial sectors.</p><p>•Address: 120 Commerce Park Dr, Jackson, MS 39213</p><p>•Phone: (601) 981-1531</p></li></div>
+    <li><a href="https://puckettmachinery.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=flowood" target="_blank">Puckett Machinery Company</a></li>
+        <div class="Service-card2"><li><a href="https://puckettmachinery.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=flowood" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvtD-qdK13O_oCVpx-Q9UUUUrij5vb3DuIYA&s" alt="" height="150px" width="150px"></a></li><li><p>•Puckett Machinery Company is the authorized Caterpillar (Cat) heavy equipment, engine, and rental dealer for central and southern Mississippi. Family-owned and operated since 1982, it is a cornerstone of the state’s construction, forestry, and power industries.</p><p>•Address: 100 Caterpillar Dr, Flowood, MS 39232</p><p>•Phone: (601) 969-6000</p></li></div>        
+    <li><a href="https://fountainconstruction.com" target="_blank">Fountain Construction Co. Inc.</a></li>
+        <div class="Service-card2"><li><a href="https://fountainconstruction.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwdUwusuNnraJIi4I1TW1-mGfNIjmlyl_e2g&s" alt="" height="150px" width="150px"></a></li><li><p>•Fountain Construction Company, Inc. is a prominent full-service general contractor headquartered in nearby Jackson, MS, but they have a significant footprint in Clinton and throughout the state. Founded in 1959, the company has grown through three generations of family leadership into one of Mississippi's most versatile commercial and industrial builders.</p><p>•Address: 5655 MS-18, Jackson, 39209</p><p>•Phone: (601) 373-4162</p></li></div>
+
+</body>
+</html>

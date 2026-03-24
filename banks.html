@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+      <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
     <style>
         h1{color: darkorchid;}
     </style>
@@ -20,15 +20,18 @@
 <style>
     /* Music Player Styles */
         
-        .player {
+       .player {
             margin-bottom: 30px;
+            align-items: center;
+        justify-content: center;
+        display: flex;
         }
 
         .vinyl-btn {
             border: none;
             background: transparent;
             cursor: pointer;
-            display: inline-flex;
+            display: flex;
             flex-direction: column;
             align-items: center;
             gap: 12px;
@@ -43,7 +46,7 @@
             width: 220px;
             height: 220px;
             border-radius: 50%;
-            display: block;
+            display: flex;
             border: 5px solid #550000;
             /* Animation setup */
             animation: spin 3.5s linear infinite;
@@ -64,6 +67,11 @@
             border-radius: 20px;
             border: 1px solid #550000;
         }
+        #banks{
+            padding-top: 50px;
+        }
+        #return{
+  padding-bottom: 50px;        }
 
         
 

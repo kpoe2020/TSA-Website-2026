@@ -111,6 +111,7 @@ p{
     width: 45%;
     padding: 8px;
     height: 15px;
+  
 }
 #Button {
     padding: 8px;
@@ -164,6 +165,23 @@ padding: 100px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 45px;
 }
+.Service-card a {
+font-size: 48px;
+    color:dodgerblue;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+.Service-card a:hover {
+font-size: 48px;
+    color:rgb(208, 66, 208);
+    text-decoration: underline;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
 .Service-card span {
     font-family: serif;
     color: darkorchid;
@@ -176,6 +194,7 @@ flex-wrap: wrap;
 gap: 20px;
 justify-content: center;
 padding: 20px;
+align-items: center;
 }
 .Service-card img{
     width: 15%;
@@ -198,6 +217,7 @@ padding: 20px;
    width: 100%;
     padding-bottom: 45px;
     padding-top: 10px;
+    justify-content: center;
 }
 .Service-card2 img{
     width: 150px;
@@ -211,7 +231,9 @@ padding: 20px;
     align-items: center;
    width: 100%;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 45px;}
+    padding-bottom: 45px;
+    justify-content: center;
+}
 .Service-card1 span {
     font-family: serif;
     color: violet;
@@ -224,7 +246,14 @@ flex-wrap: wrap;
 gap: 10px;
 justify-content: center;
 padding: 10px;
+align-items: center;
+      
+        
 
+}
+.Service-card1 h3 a {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .Service-card1 img{
     width: 15%;
@@ -237,6 +266,8 @@ padding: 10px;
     font-size: 16px;
     color:violet;
     text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .Service-card1 a:hover{
 color: plum;
@@ -264,5 +295,29 @@ li {
         border-style: solid;
         display:grid;
         border-width: 2.5px;
+        width: 100%;
 
+    }
+    .resource-list img{
+        padding-left: 50px;
+    }
+    .directory  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    #return h1{          
+    display: flex;
+    align-items: center;
+    justify-content: center}
+    #return a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    #clinton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
