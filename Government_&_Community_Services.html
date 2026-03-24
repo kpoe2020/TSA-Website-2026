@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+        /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #9c2414;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #9c2414;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #9c2414;
+        }
+        #return{
+            padding-bottom: 30px;
+        }
+        #beauty{
+            padding-top: 30px;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Government & Communiy Services</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+
+ 
+     <audio id="audio" src="Xavien .mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTykYIXZI6ovM7zB7DT4Agm9OPb-fmKGHnSTg&s" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Xavien .mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+   <div class="Service-card3"><audio controls>
+  <source src="Xavien .mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+<a href="https://youtu.be/KnS9s9Pb97A?si=2VtUvSyXAenp0IMM" target="_blank">thank you for letting me use your beat Xavien</a>
+   </div>
+   <script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+
+    <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+    <div id="gov" class="tab-content2">
+    <h2> 
+       Government Services in Clinton, ms 
+    </h2>
+    <li><a href="https://clintonms.org/" target="_blank">City of Clinton</a></li>
+        <div class="Service-card2"><li><a href="https://clintonms.org/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKROZQyHPOoHtT78MTj3KmOs--n4xHy39EOA&s" height="150px" alt="" width="150px"></a></li><li><p>•The City of Clinton is the local governing agency for Clinton, MS. It operates as a municipal corporation with a mayor-council government, managing city administration, services, and departments like police and finance for the municipality City of Clinton, MS.</p><p>•Phone: (601) 924-2221</p></li></div> 
+    <li><a href="https://www.dor.ms.gov" target="_blank">Mississippi Department of Revenue</a></li>
+        <div class="Service-card2"><li><a href="https://www.dor.ms.gov" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxXzgadQ_ab4eEhVSy73V59PVDHDId1J5oDLRh7JtUorLr9kTbciByFs&s=10" height="150px" alt="" width="150px"></a></li><li><p>•The Mississippi Department of Revenue (DOR) is the primary agency responsible for the administration and enforcement of the state’s tax laws. Since 2011, the agency has been headquartered in Clinton, Mississippi, at the Clinton Center Drive complex. As of early 2026, the department is a critical engine for the state’s economy, managing more than 50 different taxes and collecting approximately $10 billion annually to fund public services like infrastructure, education, and public safety.</p><p>•Address: 500 Clinton Center Dr, Clinton, MS 39056</p><p>•Phone: (601) 923-7700</p></li></div> 
+    <li><a href="https://clintonms.org/" target="_blank">Water Department of Clinton</a></li>
+        <div class="Service-card2"><li><a href="https://clintonms.org/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR91mAE438DwtIG6s8pdnhW0X4i62PfjSfv1g&s" height="150px" alt="" width="150px"></a></li><li><p>•The Clinton Water Department, a division of the City of Clinton Public Works, is responsible for the production and distribution of potable water and the maintenance of the city's sewer infrastructure. As of early 2026, the department is undergoing a significant modernization of its customer service and billing operations.</p><p>•Address: 527 Springridge Rd, Clinton, MS 39056</p><p>•Phone: (601) 924-2239</p></li></div> 
+<li><a href="https://clintonms.org/public-works-2/" target="_blank">Clinton Public Works and Utilites Department</a></li>
+    <div class="Service-card2"><li><a href="https://clintonms.org/public-works-2/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUWfu9-Q-WqI9shIrPRhROAQukAr7C1VorNw&s" height="150px" width="150px" alt=""></a></li><li><p>•The City of Clinton Public Works Department is the primary agency responsible for maintaining the city's essential infrastructure, including water, sewer, streets, and sanitation. As of 2026, the department is managed by Director Phillip Lilley and operates out of the Public Works Facility on Springridge Road.</p><p>•Address: 525 Springridge Rd, Clinton, MS 39056</p><p>•Phone: (601) 924-2239</p></li></div> 
+
+
+
+</div>
+<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="Community" class="tab-content2">
+    <h2> Community Services in Clinton, ms</h2>
+    <li><a href="https://clintonms.org/fire-department/" target="_blank">Fire Department of Clinton</a></li>
+        <div class="Service-card2"><li><a href="https://clintonms.org/fire-department/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrPv0IrK4mn2ayYb20bg_5xO4Lyt6Yj3rb1w&s" height="150px" alt="" width="150px"></a></li><li><p>•The Clinton Fire Department (CFD) is a full-service emergency response agency dedicated to fire suppression, emergency medical services, and community safety. As of 2026, the department is a critical component of Clinton’s reputation as one of the safest cities in Mississippi.</p><p>•Address: 910-998 Old Vicksburg Rd, Clinton, MS 39056</p><p>•Phone: (601) 925-1001</p></li></div> 
+    <li><a href="https://clintonms.org/police-department/" target="_blank">Police Department of Clinton</a></li>
+        <div class="Service-card2"><li><a href="https://clintonms.org/police-department/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSehmzcLK6OrDslmNlVoQWeeocRqz73qtrW1Q&s" height="150px" alt="" width="150px"></a></li><li><p>•The Clinton Police Department (CPD) is a professional, community-oriented law enforcement agency dedicated to maintaining Clinton's status as one of the safest cities in Mississippi. As of 2026, the department emphasizes modern policing strategies combined with proactive community engagement.</p><p>•Address: 305 Monroe St, Clinton, MS 39056</p><p>•Phone: (601) 924-5252</p></li></div> 
+    <li><a href="https://metroymcams.org/clinton-branch" target="_blank">Clinton Branch YMCA</a></li>
+        <div class="Service-card2"><li><a href="https://metroymcams.org/clinton-branch" target="_blank"><img src="https://www.ymcanorth.org/themes/custom/ymca/img/ymca-logo-social.png" height="150px" alt="" width="150px"></a></li><li><p>•The Clinton Branch YMCA is a full-service facility part of the Metropolitan YMCAs of Mississippi. Located in a residential area of Clinton, it serves as a central hub for fitness, youth development, and community engagement for the Jackson metro area.</p><p>•Address: 400 Lindale St, Clinton, MS 39056</p><p>•Phone: (601) 924-5812</p></li></div>  
+    <li><a href="https://www.jhlibary.org/viit-us/quinsenberry-libary" target="_blank">The Quisenberry Libary</a></li>
+        <div class="Service-card2"><li><a href="https://www.jhlibary.org/viit-us/quinsenberry-libary" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerOHWnMNBIkBBXnjE9Zg9tWPzqc9B9srSTbov2833CWDxCJZjTUAatoRCXKTTws_Ylj4fP_jHTzUNCBqhO4vjVQpcQwRk43BnzYSaT6DF6qa67grN06QKbqGFJUjkrzlCq9xqbY=s780-w780-h624-n-k-no" height="150px" alt="" width="150px"></a></li><li><p>•The Quisenberry Library is the Clinton branch of the Jackson-Hinds Library System (JHLS). It serves as a modern community hub for education and recreation, noted for its unique integration with the surrounding natural landscape.</p><p>•Address: 605 E Northside Dr, Clinton, MS 39056</p><p>•Phone: (601) 924-5684</p></li></div>  
+    <li><a href="https://msinstitute.com" target="_blank">Mississippi Institute of Aesthetics, Nails, and Cosmetology</a></li>
+        <div class="Service-card2"><li><a href="https://msinstitute.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAn8tGvFDBITvxZWrwSi3lnA62wVWnuOTLJA&s" height="150px" alt="" width="150px" ></a></li><li><p>•The Mississippi Institute of Aesthetics, Nails, & Cosmetology is a private, for-profit vocational school located in Clinton, Mississippi. Established in 2004, the institute provides specialized training for students pursuing careers in the beauty and wellness industry.</p><p>•Address: 460B Springridge Rd, Clinton, MS 39056</p><p>•Phone: (601) 925-1344</p></li></div>    
+    <li><a href="https://www.clintonchamber.org" target="_blank">Clinton Chamber of Commerce</a></li>
+        <div class="Service-card2"><li><a href="https://www.clintonchamber.org" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQFT5xqWM4hvnw/company-logo_200_200/company-logo_200_200/0/1630462233628?e=2147483647&v=beta&t=B0rB78vUblrsVfWuD_YZsIXJH6PM-hCpdM-iaIvsEa4" height="150px" width="150px" alt=""></a></li><li><p>•The Clinton Chamber of Commerce is a non-profit, member-driven organization dedicated to serving, promoting, and protecting the business community in Clinton, Mississippi. Founded in 1965, it acts as the primary liaison between local businesses, the city government, and the general public.</p><p>•Address: 703 Hwy 80 W, Clinton, MS 39056</p><p>•Phone: (601) 924-5912</p></li></div> 
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css"></head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+    /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #bd33a4;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #bd33a4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #bd33a4;
+        }
+        #return{
+            padding-bottom: 30px;
+        }
+        #beauty{
+            padding-top: 30px;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Barbershops and Salons in Clinton, MS</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+ <audio id="audio" src="Archie.mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5BbdLhh6PRiOJdaJlb9fLgHFVQeDmjcWcCw&s" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Archie.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+   <div class="Service-card3"><audio controls>
+  <source src="Archie.mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+<a href="https://youtu.be/Sdhczo_i0ZM?si=5dHwACEyPgOcRL9Q" target="_blank">Produce by Archi music</a>
+   </div>   
+<div id="Beauty" class="tab-content2">
+    <h2>
+       Barbershop
+
+    </h2>
+    <li><a href="https://Tomasbarbershop.com" target="_blank">Tomas' Barbershop</a></li>
+        <div class="Service-card2"><li><a href="https://Tomasbarbershop.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUG-7SUt7glvfh2gn_WbX6Zgdlc2OJ5Dpftg&s" height="150px" width="150px" alt=""></a></li><li><p>•Tomas’ Barbershop is a premier grooming destination in Clinton, Mississippi, established in 2020 by owner Tomas Miguel. It is widely recognized for combining traditional barbering techniques with modern styling, while maintaining a strong emphasis on community and personal connection.</p><p>•Address: 322 US-80, Suite F, Clinton, MS 39056</p><p>•Phone: (601) 460-4491</p></li></div>
+    <li><a href="https://www.styleseat.com/m/v/torrancegreen" target="_blank">The Fresh Pimp Lair</a></li>
+     <div class="Service-card2"><li><a href="https://www.styleseat.com/m/v/torrancegreen" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerMmcxP1Ro6jvlu5eFMemSFEAANZtyaFByw88qFqzmpix9lXp1Pg3H_88lfzKXJ_mW6Ak0vd6zqNaxO4VMHeYGHMVZP4AnfhAhod9xBqGDYpTR_2D0Muj8QtDy2dQ1eONG3tN5q4w=s624-w498-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•The Fresh Pimp Lair is a private, appointment-only grooming establishment located in Jacon, Mississippi.</p><p>•Address: 330N Mart Plaza Ste. 17, Jackson, MS 39206</p><p>•Phone: (601) 291-2916</p></li></div>
+    
+</div>
+<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="Salon" class="tab-content2">
+    <h2>Salons in Clinton</h2>
+    <li><a href="https://www.thevaultsalonms.com" target="_blank">The Vault Salon MS </a></li>
+         <div class="Service-card2"><li><a href="https://www.thevaultsalonms.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerDd8tdhGyasWREgSwx5nwY5CUKMxqvJK2wLwU46WmTFSA09TtMAc8vyTtoT2gLrCLliflVcLEzbNpun2SWaM-ka0sn1XIdWP9nO6k4HCK9QBUbLh2LVaV5JXsOpHIv90-XJVO_Wg=s624-w498-h624-n-k-no" height="150px" width="150px"></a></li><li><p>•The Vault Salon is an award-winning, boutique beauty destination located in the heart of Clinton, Mississippi. Voted Clinton’s "Best Business of the Year" in 2023, the salon is known for its high-end, personalized service and a philosophy of making every guest feel "safe and secure" (hence the name "The Vault").</p><p>•Address: 200A West Leake St, Clinton, MS 39056</p><p>•Phone: (601) 910-2090</p></li></div>
+    <li><a href="https://www.facebook.com/jillianssalon759/" target="_blank">Jillan's Salon</a></li>
+            <div class="Service-card2"><li><a href="https://www.facebook.com/jillianssalon759/" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepovEOBwENHlQqqd4J9izRvRpYjMwfptS4U00-fF1BIfclYk3YhWhi_n5XmbhOVLZ-Z4V0Yzd6_kzveuuKI_xVAKVf91Dzzn1uv91DgoiEjoZJM4It2EwonMvgg02h8aTnLtwWN=s624-w348-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•Jillian’s Salon is a top-rated, full-service hair salon and boutique located in Clinton, Mississippi. Founded by Jill Hutchison, who brings over 20 years of industry experience and a background in biology to her craft, the salon is known for its "Quality Business Award" (2024) and its commitment to hair health and ongoing education.</p><p>•Address: 420 Monroe Street, Clinton, MS 39056</p><p>•Phone: (601) 925-0336</p></li></div>
+    <li><a href="https://bloomx.glossgenius.com" target="_blank">Bloom X Beauty Lounge</a></li>
+                 <div class="Service-card2"><li><a href="https://bloomx.glossgenius.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer8e-77uvqyNv06xtPiABwCpFzdDT-KP4vlxyKA2BCcY8JchKdWlxxYys-IA82O67x87jl6P43QiMMTbhNJEtI9PoaIENgfjBmg4jOqIUi_cqV4kdSrN5iy60quJ2Z9vY07Eg2O8Q3F-59x=s624-w468-h624-n-k-no" alt="" height="150px" width="150px"></a></li><li><p>•Bloom X Beauty Lounge is an upscale nail salon and spa located in Clinton, Mississippi. It differentiates itself by offering a "spa-like" experience that prioritizes hygiene and organic products, moving away from the typical fast-paced nail salon environment to focus on relaxation and personalized care.</p><p>•Address: 484 Springridge Road, Suite D, Clinton, MS 39056</p><p>•Phone: (601) 910-5799</p></li></div>
+    <li><a href="https://luxedayspams.com" target="_blank">Luxe Day Spa</a></li>
+                     <div class="Service-card2"><li><a href="https://luxedayspams.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweryzQVZFNgvad4O2jJW8W4DJdbcMstgwLGJ1HhmfbzO5_MoYj1nZD4dUvo_CJkW0SLhPe1xpnLHE-jUUtz770SiSD2I_p1yD2ZyQfvU753BA1RSSdRERNzRxJNY9E7ix3xGNB1ariI4jOYk=s624-w498-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•Luxe Day Spa is a professional beauty and relaxation center located on Highway 80 in Clinton, Mississippi. It is a full-service spa known for combining high-end nail artistry with therapeutic body and skin treatments in a tranquil, sanitized environment.</p><p>•Address: 322 Highway 80 East, Suite 12, Clinton, MS 39056</p><p>•Phone: (601) 473-2460</p></li></div>
+    <li><a href="https://Fivestarspa.favesalon.com" target="_blank">Five Star & Nail</a></li>
+        <div class="Service-card2"><li><a href="https://Fivestarspa.favesalon.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerzPAvJYcwHk5ZaG_HkYh6q_i3oEdT07y4HD1Lr71bLyiWqidPz_8D5ili-7d1uxck3dzOXsK3DXQvOhsL3qGpZXM2qfgjapuDrnaWZlkIgrTd6cZr78MSsfcmJKfQWX3huPls_AKr_LztH=s624-w498-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•Five Star Spa & Nails (often referred to simply as Five Star Nails) is a established full-service beauty and wellness destination in Clinton, Mississippi. Located on Highway 80, it is known for providing a comprehensive "one-stop-shop" experience that spans from basic nail maintenance to advanced medical spa treatments</p><p>•Address: Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 924-9757</p></li></div>
+</div>
+<script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+
+</body>
+</html>

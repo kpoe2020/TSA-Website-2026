@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Banks</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+<style>
+    /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #550000;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #550000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #550000;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+   
+      <audio id="audio" src="nimb33.mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25d45014-8cc3-4c98-b02c-5a0cf3a55ddd/ddhbo8x-6ef4cc08-aab0-497e-af68-3665ecd0931e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yNWQ0NTAxNC04Y2MzLTRjOTgtYjAyYy01YTBjZjNhNTVkZGQvZGRoYm84eC02ZWY0Y2MwOC1hYWIwLTQ5N2UtYWY2OC0zNjY1ZWNkMDkzMWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.j-_B_6njT-msVasTdac4GzaqXWBuMhNd4A8uRJ4HHrs" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="nimb33.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div class="Service-card3"><audio controls>
+  <source src="nimb33.mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+<a href="https://youtu.be/LJh832MPuoA?si=4fbeET0uUGO0Tytu" target="_blank">Thanks for letting me use your music @nimb33.</a>
+    </div>
+<script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+        <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="100%" height="5px">
+
+    <div id="banks" class="tab-content2">
+    <h2>
+        Banks in Clinton, Mississippi
+    </h2>
+    <li><a href="https://www.renasantbank.com/locations/clinton?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=Clinton" target="_blank">Renasant Bank</a></li>
+       <div class="Service-card2"><li><a href="https://www.renasantbank.com/locations/clinton?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=Clinton" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfV4R9S5rvTuX1fR8wmcX4tVCzQ7h1J5Lm6Q&s" alt="" height="150px" width="150px"></a></li><li><p>•Renasant bank has a prominent presence in Clinton, MS, serving as a traditional community-focused financial institution. While it offers a full suite of modern banking tools, it is best known locally for its mortgage lending and personal relationship banking.</p></p><p>•Address: 411 US-80, Clinton, MS 39056</p><p>•Phone: (601) 924-8389</p></li></div>
+    <li><a href="https://cadencebank.com/find-a-location/cadence-clinton-branch" target="_blank">Cadence Bank</a></li>
+        <div class="Service-card2"><li><a href="https://cadencebank.com/find-a-location/cadence-clinton-branch" target="_blank"><img src="https://play-lh.googleusercontent.com/EnRYrgDHWXj6Y8Dtbhj_uRicFnUZm0kFzmIcPCtHZ3bgN0UPCyOhMGVFpHQt9SP5cA" alt="" height="150px" width="150px"></a></li><li><p>•Cadence Bank in Clinton, MS, is a regional financial institution that formed from the 2021 merger between Cadence Bancorporation and BancorpSouth. It is known for its "LIVE Teller" technology and a strong focus on commercial and mortgage lending.</p></p><p>•Address: 407 US-80, Clinton, MS 39056</p><p>•Phone: (601) 924-7711</p></li></div>
+    <li><a href="https://www.trustmark.com/locations/ms/clinton/clinton.html?scrlybrkr=6700c509" target="_blank">Trustmark</a></li>
+        <div class="Service-card2"><li><a href="https://www.trustmark.com/locations/ms/clinton/clinton.html?scrlybrkr=6700c509" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxicG_Qby4Sak786ViicTMZw-jGsj7mVW2bA&s" alt="" height="150px" width="150px"></a></li><li><p>•Bank is one of the most established financial institutions in Clinton, MS, known for its extensive local history and a high density of accessible service points. It is often the primary choice for residents who prioritize having multiple physical locations within a small radius.</p></p><p>•Addresses: Clinton Boulevard Branch: 203 Clinton Blvd, Clinton, MS 39056 & Pinehaven Branch: 1151 Pinehaven Dr, Clinton, MS 39056.</p><p>•Phone: (601) 354-5077 & (601) 354-5948</p></li></div>
+    <li><a href="https://www.regions.com/locator/ms/clinton/full-service-branch-609-highway-80-e?cid=localListing_google" target="_blank">Regions Bank</a></li>
+        <div class="Service-card2"><li><a href="https://www.regions.com/locator/ms/clinton/full-service-branch-609-highway-80-e?cid=localListing_google" target="_blank"><img src="https://chambermaster.blob.core.windows.net/images/members/854/22909/MemPageHeader_regions%20logo%20vertical%20(002).png" alt="" height="150px" width="150px"></a></li><li><p>•Regions Bank in Clinton, MS, is a prominent regional player known for its convenient Highway 80 location and a strong emphasis on "LifeGreen" products and digital banking integration.</p></p><p>•Address: 609 Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 708-0770</p></li></div>
+    <li><a href="https://www.bankplus.net/locations/browse-locations/mississippi/clinton/clinton-blvd/?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=clinton-blvd" target="_blank">BankPlus</a></li>
+        <div class="Service-card2"><li><a href="https://www.bankplus.net/locations/browse-locations/mississippi/clinton/clinton-blvd/?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=clinton-blvd" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/82/af/3682afd6-1ef0-b6e9-10cc-29640912c0c0/AppIcon-0-1x_U007emarketing-0-8-0-85-220-0.png/1200x630wa.jpg" alt="" height="150px" width="150px"></a></li><li><p>•BankPlus in Clinton, MS, is a major regional bank known for its "core community" feel blended with high-tech teller services. It is particularly popular for its extended banking hours and its support of local institutions like Mississippi College.</p></p><p>•Address: Clinton Bouevard Branch, 217 Clinton Blvd, Clinton, MS 39056, Springridge/Johnston Place Branch, 102 Johnston Place, Clinton, MS 39056, & 200 S Capitol St, Clinton, MS 39056</p><p>•Phone: (601) 924-0081 & (601) 924-1975</p></li></div>
+    <li><a href="https://mpbank.net" target="_blank">Merchants & Planters Bank</a></li>
+        <div class="Service-card2"><li><a href="https://mpbank.net" target="_blank"><img src="https://play-lh.googleusercontent.com/o8ZC3ueALULBCLiN4shWjONdyAN7iCtdoIQyAG7iFIkpTicsuH6P3GDO-rm-ofQarog" alt="" height="150px" width="150px"></a></li><li><p>•Merchants & Planters Bank (M&P Bank) in Clinton, MS, is a community-focused regional bank with deep roots in Hinds County. Originally founded in Raymond, Mississippi, in 1906, it has grown into a modern financial institution while maintaining the "personal touch" of a small-town bank.</p></p><p>•Address: 133 Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 924-9557</p></li></div>
+    <li><a href="https://www.woodforest.com/" target="_blank">Woodforest National Bank</a></li>
+       <div class="Service-card2"><li><a href="https://www.woodforest.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rBXfhty6Fg093bZyGZNmFqevEfmKAJDwAw&s" alt="" height="150px" width="150px"></a></li><li><p>•Woodforest National Bank in Clinton, MS, is unique for its high-convenience model, operating almost exclusively inside retail environments like Walmart Supercenter on 950 US-80 East, Clinton, MS. It is a popular choice for residents who need flexible banking hours that align with their shopping schedule.</p></p><p>•Address: 950 US-80 East, Clinton, MS 39056</p><p>•Phone: (601) 925-4633</p></li></div>
+    <li><a href="https://copiahbank.com" target="_blank">Copiah Bank</a></li>
+            <div class="Service-card2"><li><a href="https://copiahbank.com"target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQFveddt_mIsKQ/company-logo_200_200/company-logo_200_200/0/1631333794205?e=2147483647&v=beta&t=TR6Ek_jrtrdaNyxr5b4FwT2ELjV-sXxlb_11u_qNzSU" alt="" height="150px" width="150px"></a></li><li><p>•Copiah Bank in Clinton, MS, is a community-oriented institution that recently modernized its local presence. Originally rooted in Hazlehurst, MS, it has expanded to offer a "big bank" digital experience with the personal feel of a small-town lender.</p></p><p>•Address: 767 Clinton Parkway, Clinton, MS 39056</p><p>•Phone: (601) 924-2200</p></li></div>
+
+</div>
+
+    
+</body>
+</html>

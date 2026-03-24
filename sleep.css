@@ -36,32 +36,52 @@ a{
 #fname{
     width: 350px;
     padding: 8px;
+    color: dodgerblue;
+
 }
 #Lname{
     width: 350px;
     padding: 8px;
+    color: dodgerblue;
+
 }
 #Email {
     width: 350px;
     padding: 8px;
+    color: dodgerblue;
 }
 #Servicename {
     width: 350px;
     padding: 8px;
+    color: dodgerblue;
 }
 #ServiceType {
     width: 350px;
     padding: 8px;
+    color: dodgerblue;
+
 }
 #Servicedesc {
     width: 350px;
     padding: 8px;
+    color: dodgerblue;
+
 }
 #Submit {
     padding: 8px;
     background-color: dodgerblue;
 }
-body{
 
-   cursor: url(carrot.jpeg), auto;
-}
+     body{
+        border-color: #ddd;
+        border-radius: 25px;
+        border-style: solid;
+        display:grid;
+        border-width: 2.5px;
+        width: 100%;
+
+    }
+
+  ::placeholder{
+    color: dodgerblue;
+  }

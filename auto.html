@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Home Maintenance & Carwash services</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+   
+   <style>
+    body{
+        border-color: #ddd;
+        border-radius: 25px;
+        border-style: solid;
+        display:grid;
+        border-width: 2.5px;
+
+    }
+    /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #ff0800;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #ff0800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #ff0800;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+   
+    <audio id="audio" src="llouis1716.mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+      <audio id="audio" src="llouis1716.mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZW0xEyGHWExYpqAnZUAHlmEpI5mk2R4CuYbczJ3oxqg&s" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="llouis1716.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+   <div class="Service-card3"><audio controls>
+  <source src="llouis1716.mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+
+<a href="https://youtu.be/xDGj-BleZNE?si=rZF88egA50hTTrJa" target="_blank">Thanks for letting me use your music @llouis1716</a>
+   </div>
+<script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+
+    <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+    <div id="Auto" class="tab-content2">
+    <h1>
+        Home Maintenance Services
+    </h1>
+    <li><a href="https://www.magnolialawnandland.com" target="_blank">Magnolia Lawn & Land</a></li>
+        <div class="Service-card2"><li><a href="https://www.magnolialawnandland.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu4mALdVk209BtZ--HyAQ5HGLGkIWnK6HAHg&s" height="150px" width="150px" alt=""></a></li><li><p>•Magnolia Lawn & Land is a residential and commercial outdoor service provider specializing in comprehensive landscape management and construction. While they serve the greater Central Mississippi area, including Clinton, their primary operations are often associated with Madison and the surrounding Hinds and Rankin counties. The company was founded with a "service-first" approach, aiming to provide high-quality, dependable lawn care that adds long-term value to a client's property.</p><p>•Service Area: Madison and the surrounding Hinds and Rankin Counties</p><p>•Phone: (601) 551-1580</p></li></div>
+    <li><a href="https://modestmowing.co" target="_blank">Modest Mowing</a></li>
+        <div class="Service-card2"><li><a href="https://modestmowing.co" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMltISzo535keyo0Z8z8qnRem5pWVUBRejQ&s" height="150px" width="150px" alt=""></a></li><li><p>•Modest Mowing is a professional lawn care provider serving Clinton and Madison, Mississippi. They position themselves as "the best at the basics," focusing on high-quality, reliable, and recurring maintenance for residential and commercial properties.</p><p>•Service Area: Primarily Clinton, MS, and Madison, MS.</p><p>•Phone: (601) 689-4002</p></li></div>
+    <li><a href="https://sslawncare.co" target="_blank">Southern Style Lawn Care</a></li>
+         <div class="Service-card2"><li><a href="https://sslawncare.co" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSntJGkzdyMF0t-9MkO3J1HrGuGyIe48bSbWg&s" height="150px" width="150px" alt=""></a></li><li><p>•Southern Style Lawn Care is a family-owned and operated lawn maintenance and landscaping business serving Clinton, Byram, and the surrounding Jackson metropolitan areas. They focus on providing reliable, professional services for both residential and commercial clients who want to maintain a polished lawn without the DIY effort.</p><p>•Service Area: Primarily Clinton, MS, and Byram, MS.</p><p>•Phone: (601) 896-7908</p></li></div>
+    <li><a href="https://www.estimates123.com" target="_blank">Estimates123</a></li>
+       <div class="Service-card2"><li><a href="https://www.estimates123.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-mv2Cq5RlLVdYY0AJpR5KMbrA04MDonS5w&s" alt="" height="150px" width="150px"></a></li><li><p>•Estimates123.com connects you to businesses interested in providing the products and services you need. It is operated by The VentureStreet Network (VentureStreet, LLC), which was founded in 2003.</p><p>•Service Areas: Hinds County area</p></li></div>
+
+</div>
+<div id="home" class="tab-content2">
+    <h1>
+     Car Washes
+    </h1>
+         <li><a href="https://goshineexpress.com" target="_blank">Goshine Express Car Wash</a></li>
+             <div class="Service-card2"><li><a href="https://goshineexpress.com" target="_blank"><img src="https://pbs.twimg.com/profile_images/692070587561222144/yxToue2u_400x400.jpg" height="150px" width="150px" alt=""></a></li><li><p>•GoShine Express Car Wash is a family-owned and operated automated car wash facility located in Clinton, Mississippi. Known for its "express" model, it provides high-tech cleaning in a fraction of the time required for a traditional detail, typically completing a cycle in under three minutes.</p><p>•Address: 400 US-80, Clinton, MS 39056</p><p>•Phone: (601) 708-1903</p></li></div>
+    <li><a href="https://mistercarwash.com" target="_blank">Mister Car Wash</a></li>
+                <div class="Service-card2"><li><a href="https://mistercarwash.com" target="_blank"><img src="https://a.mktgcdn.com/p/9cFlQe12inCkMgUyec3iFEj39QCeHmKEzILhMrTUhKA/1282x1282.png" height="150px" alt="" width="150px"></a></li><li><p>•Mister Car Wash is a premier national car wash chain with a strong presence in Clinton, Mississippi. They are known for their "Inspiring People to Shine" mission and provide a high-tech, efficient express wash experience that utilizes their proprietary Unity Chemistry System to ensure a safe, deep clean.</p><p>•Address: 101 Fairmont St, Clinton, MS 39056</p><p>•Phone: (601) 925-9728</p></li></div>
+
+</div>
+<div id="car" class="tab-content">
+    <h1>Oil Change Services</h1>
+        <li><a href="https://www.walmart.com/store/1710-clinton-ms/auto-care-center/?veh=seo_loc" target="_blank">Walmart Auto Center</a></li>
+             <div class="Service-card2"><li><a href="https://www.walmart.com/store/1710-clinton-ms/auto-care-center/?veh=seo_loc" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSBUeRsKR-WbhazoToK9lrhjUA902Wv2w2Pw&s" height="150px" width="150px" alt=""></a></li><li><p>•The Walmart Auto Care Center in Clinton, MS (Store #1710), is a convenient option for routine vehicle maintenance, located right off Highway 80. It functions as a "one-stop shop" where you can drop your car off for service while you shop in the Supercenter.</p><p>•Address: 950 US-80, Clinton, MS 39056</p><p>•Phone: (601) 926-9631</p></li></div> 
+        <li><a href="https://www.mavis.com/locations/clinton-ms/?utm_id=go_cmp-22406683891_adg-176967796466_ad-774878840867_kwd-341461820147_dev-m_ext-_prd-_mca-_sig-Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB&utm_source=google&ef_id=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB:G:s&gad_source=1&gad_campaignid=22406683891&gclid=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB" target="_blank">Mavis Tires & Brakes - Clinton</a></li>
+             <div class="Service-card2"><li><a href="https://www.mavis.com/locations/clinton-ms/?utm_id=go_cmp-22406683891_adg-176967796466_ad-774878840867_kwd-341461820147_dev-m_ext-_prd-_mca-_sig-Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB&utm_source=google&ef_id=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB:G:s&gad_source=1&gad_campaignid=22406683891&gclid=Cj0KCQjwgr_NBhDFARIsAHiUWr7Q8glk3UbjnKegL6nfuJuZ4klv6O5CSyBHknQKRgRL9_OJkWWJBK4aAlmsEALw_wcB" target="_blank"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/hgYVpB7L33FNFwkXRhj7eA/348s.jpg" height="150px" width="150px" alt=""></a></li><li><p>•Mavis Tires & Brakes in Clinton, MS, is a high-volume auto service center located on Springridge Road. It is a popular alternative to the Walmart Auto Center for those looking for more specific mechanical work like brake repairs and alignments.</p><p>•Address: 604 Springridge Rd, Clinton, MS 39056</p><p>•Phone: (601) 227-7630</p></li></div>      
+        <li><a href="https://oilchangems.com" target="_blank">Rapid Oil Change Inc</a></li>
+               <div class="Service-card2"><li><a href="https://oilchangems.com" target="_blank"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ppQiI5AfxMzNb2RnWNFARA/348s.jpg" height="150px" width="150px" alt=""></a></li><li><p>•Rapid Oil Change, Inc. is a family-owned Mississippi business that has been operating since 1984. The Clinton location is known for its "Hometown Pros" atmosphere and provides a more comprehensive maintenance check than your average 10-minute lube shop.</p><p>•Address: 955 US-80, Clinton, MS 39056</p><p>•Phone: (601) 924-0507</p></li></div>   
+        <li><a href="https://www.take5.com/locations/oil-change/mississippi/clinton/31160/?utm_source=google&utm_medium=organic&utm_campaign=gbp_website" target="_blank">Take 5 Oil Change</a></li>
+             <div class="Service-card2"><li><a href="https://www.take5.com/locations/oil-change/mississippi/clinton/31160/?utm_source=google&utm_medium=organic&utm_campaign=gbp_website" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb8AQ30GVp4UrXo-1H5KOH9yxlWiF2zYGlvw&s" height="150px" width="150px" alt=""></a></li><li><p>•Take 5 Oil Change in Clinton, MS, is best known for its "stay-in-your-car" model, designed for maximum speed and convenience. It is located on Highway 80, making it a very accessible pit stop for residents and commuters.</p><p>•Address: 403 US-80, Clinton, MS 39056</p><p>•Phone: (601) 339-6503</p></li></div> 
+</div>
+    
+</body>
+</html>

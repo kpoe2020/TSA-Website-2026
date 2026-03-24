@@ -5,10 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services in Clinton, MS Website</title>
     <link rel="stylesheet" href="sleep.css">
-<script src="Script2.js"></script>
+<script src="script5.js"></script>
+<style>
+    /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #ff4b33;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #ff4b33;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #ff4b33;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1300px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
     <style>
         h1{color: darkorchid;}
     </style>
@@ -49,47 +109,16 @@
        <option>Banks</option><br>
         <option>other</option><br>
     </datalist></form>
-         <form><label for="Servicedesc">Description</label><br>
+    <form><label for="Servicedesc">Description</label><br>
             <input type="text" id="Servicedesc" name="Servicedesc" placeholder="what your service does and website name"><br></form>
-            
-            <form><input type="submit" id="Submit"
-              placeholder="Submit"></form>
+                 <form><input type="submit" id="Submit"  placeholder="Submit"></form>
+       
    
    
-<style>
-    .disk{
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsvJXXNjLgUVu_WWk97TSYHRsOejjA7jHrVQ&s") center/cover;
-        cursor: pointer;
-    }
-    .disk.playing {
-        animation: spin 3s linear infinite;
-    }
-    @keyframes spin {
-        from { transform: rotate(0deg) ;}
-        to { transform: rotate(360deg);}
-    }
-    </style>
 
-    <audio id="audio" src="[prod. Frozy x warheart].mp3" loop></audio>
-    <div class="disk" onclick="togglePlay()"></div>
-<a href="https://youtu.be/UTbWGBZJ32U?si=t8pGLwEJiraXcCG5" target="_blank"> [Prod. frozy x warheart]</a>
-    <script>
-        const audio = document.getElementById("audio");
-        const disk = document.querySelector(".disk");
 
-        function togglePlay() {
-            if (audio.paused) {
-                audio.play();
-                disk.classList.add("playing");
-            } else {
-                audio.pause();
-                disk.classList.remove("playing");
-            }
-        }
-    </script>
+
+     <div class="Service-card3"><audio controls><source src="Frozy.mp3" type="audio/mpeg" loop>Your browser does not support the audio element.</audio><a href="https://youtu.be/UTbWGBZJ32U?si=t8pGLwEJiraXcCG5" target="_blank"> [Prod. frozy x warheart]</a></div>
     
 </body>
 </html>

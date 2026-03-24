@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Utilities & Internet Providers Services</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+   <style>
+   /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #40826D;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #40826D;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #40826D;
+        }
+        #return{
+            padding-bottom: 30px;
+        }
+        #beauty{
+            padding-top: 30px;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+
+     <audio id="audio" src="Stoic.mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://m.media-amazon.com/images/I/71tOLS7L2fL._AC_UF1000,1000_QL80_.jpg" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Stoic.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div class="Service-card3"><audio controls>
+  <source src="Stoic.mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+<a href="https://youtu.be/dxxUxIPw_Z4?si=fnKU8NNvMjdSmV3X" target="_blank">produce by Stoic</a>
+    </div>
+   <script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+
+    <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="100%" height="5px">
+    <div id="service" class="tab-content2">
+    <h2>
+       Utilites services in Clinton, MS
+    </h2>
+    <li><a href="https://www.entergy.com" target="_blank">Entergy Clinton, MS KAST Center</a></li>
+       <div class="Service-card2"><li><a href="https://www.entergy.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAaySOmiBw9kUyvR3DYXhUAuCJD1o6xrYndA&s" alt="" height="150px" width="150px"></a></li><li><p>•The Entergy Knowledge and Skills Training (KAST) Center in Clinton, Mississippi, is a premier, high-tech training hub for Entergy’s workforce. It serves as the primary educational facility for lineworkers and substation personnel across Entergy’s four-state service area (Mississippi, Arkansas, Louisiana, and Texas).</p></p><p>•Address: 1000 Springridge Rd, Clinton, MS 39056</p><p>•Phone: (800) 968-8243</p></li></div>
+    <li><a href="https://www.atmosenergy.com/" target="_blank">Atmos Energy</a></li>   
+        <div class="Service-card2"><li><a href="https://www.atmosenergy.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOvm_zRgIT-XgNDz2HMoQ8rVseY5aQvqwR6w&s" alt="" height="150px" width="150px"></a></li><li><p>•Atmos Energy Corporation is one of the largest natural-gas-only distributors in the United States and serves as the primary natural gas provider for the city of Clinton, Mississippi. Headquartered in Dallas, its Mississippi division is a major utility footprint in the state, serving approximately 251,000 customers across 110 communities.</p></p><p>•Address: 4155 Industrial Dr, Jackson, MS 39209</p><p>•Phone: (601) 961-6600</p></li></div>
+    <li><a href="https://www.wm.com/us/en/location/ms/clinton/trash-pickup-clinton-ms" target="_blank">Waste Management</a></li>
+           <div class="Service-card2"><li><a href="https://www.wm.com/us/en/location/ms/clinton/trash-pickup-clinton-ms" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPZaB7PwtNUCbHEZ5FUaDs7vHysWnDG3pbng&s" alt="" height="150px" width="150px"></a></li><li><p>•Waste Management (WM), formerly known as Waste Management, Inc., is the leading provider of comprehensive environmental solutions in North America. The company manages the entire lifecycle of waste—from collection to disposal and resource recovery.</p></p><p>•Phone: (601) 924-5474</p></li></div>
+   </div>
+   <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="100%" height="5px">
+   
+   <div class="provide" class="tab-content2">
+    <h2>Internet Providers in Clinton, MS</h2>
+    <li><a href="https://cspire.com" target="_blank">Cspire</a></li>
+        <div class="Service-card2"><li><a href="https://cspire.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCwWy67LR2gRk25XiictO4SS2HHQQwQYk2tQ&s" alt="" height="150px" width="150px"></a></li><li><p>•In Clinton, Mississippi, C Spire is a major provider of telecommunications and technology services. Unlike national carriers, C Spire is a Mississippi-based company, which often leads to a heavy focus on local infrastructure like fiber-to-the-home.</p></p><p>•Address: 222 Hwy 80, Clinton, MS 39056</p><p>•Phone: (855) 277-4735</p></li></div>
+    <li><a href="https://www.att.com" target="_blank">AT&T</a></li>
+       <div class="Service-card2"><li><a href="https://www.att.com" target="_blank"><img src="https://assets.weforum.org/organization/image/hRiZoy6qNMv7D-YblWFRXINkKb_3-9aj8xSMjID05kk.jpg" alt="" height="150px" width="150px"></a></li><li><p>•AT&T is one of the primary telecommunications providers in Clinton, Mississippi, offering a range of wireless, home internet, and business solutions. As of 2026, the company continues to expand its high-speed fiber footprint in the area to compete with local providers like C Spire and Xfinity.</p></p><p>•Address: 322 US-80 Ste B, Clinton, MS 39056</p><p>•Phone: (601) 924-6690</p></li></div>
+    <li><a href="https://www.xfinity.com" target="_blank">Xfinity</a></li>
+        <div class="Service-card2"><li><a href="https://www.xfinity.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUWG3V0ds3gpAB1Qqj0llpyIzxOBoDBlf4A&s" alt="" height="150px" width="150px"></a></li><li><p>•Xfinity is a primary internet and television provider in Clinton, MS, known for its widespread availability and high-speed cable infrastructure. As of early 2026, it remains one of the most accessible options for residents, covering approximately 92% to 99% of the city.</p></p><p>•Address: 710 Highland Colony Pkwy Suite B, Ridgeland, MS</p><p>•Phone: (800) 934-6489</p></li></div>
+    <li><a href="https://wwwmt-mobile.com" target="_blank">T-Mobile</a></li>
+        <div class="Service-card2"><li><a href="https://wwwmt-mobile.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr7ZP43oLD4V8B7hC6EKotgKGT8bw4qp2VFA&s" alt="" height="150px" width="150px"></a></li><li><p>•T-Mobile in Clinton, MS, is a major wireless and home internet provider, known for offering high-speed 5G performance at a more aggressive price point than its primary competitors, AT&T and Verizon.</p></p><p>•Address: 316 US-80, Clinton, MS 39056</p><p>•Phone: (769) 770-7462</p></li></div>
+   </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Education & Childcare Services</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+   <style>
+    /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid cyan;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: cyan;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid cyan;
+        }
+        #return{
+            padding-bottom: 30px;
+        }
+        #beauty{
+            padding-top: 30px;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+      <audio id="audio" src="Sheepy.mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa22ICA1STorDuK5J9bU1vLIUT6jbDKgQdYg&s" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Sheepy.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div class="Service-card3"><audio controls>
+  <source src="Sheepy.mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+<a href="https://youtu.be/NdtxBrqSpBQ?si=58zR31j_SZ213L1Q" target="_blank">thx for letting me using your beat Sheepy</a>
+    </div>
+   <script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+
+    <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="edu" class="tab-content2">
+    <h2>
+        Education services in Clinton, ms
+    </h2>
+    <li><a href="https://www.mc.edu" target="_blank">Mississippi College</a></li>
+        <div class="Service-card2"><li><a href="https://www.mc.edu" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzO6pj9CxlRKuvoiJPxKxsLOK4eLNqIoH2A&s" alt="" height="150px" width="150px"></a></li><li><p>•Located in Clinton, Mississippi College (MC) is a private, Christian university with a legacy spanning two centuries. Founded in 1826, it is the oldest institution of higher learning in the state and the largest private university in Mississippi.</p></p><p>•Address: 200 S Capitol St, Clinton, MS 39056</p><p>•Phone: (601) 925-3000</p></li>
+ </p></div>
+    <li><a href="https://www.clintonpublicschools.com/" target="_blank">Clinton Public School District</a></li>
+        <div class="Service-card2"><li><a href="https://www.clintonpublicschools.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdr3-yoDWPK-4DDmbxM42D7oy4J9h1PUSHtA&s" alt="" height="150px" width="150px"></a></li><li><p>•Clinton Public School District (CPSD) is a top-tier K-12 public school system serving the city of Clinton, Mississippi since 1970. As of early 2026, it maintains a reputation as one of the highest-performing districts in the state, known for its unique organizational structure and consistent academic excellence</p></p><p>•Address: 201 Easthaven Drive, Clinton, MS 39056</p><p>•Phone: (601) 924-7533</p></li></div>
+    <li><a href="https://www.ccawarriors.ms" target="_blank">Clinton Christian Academy</a></li>
+        <div class="Service-card2"><li><a href="https://www.ccawarriors.ms" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcMGW_bHLoOY53kMcVwlPLAfMMs3WKtt5E3Q&s" width="150px" height="150px" alt=""></a></li><li><p>•Clinton Christian Academy (CCA) is a private, co-educational, non-denominational Christian school located in Clinton, Mississippi. Founded in 2007, the school serves students from Pre-K (K3) through 12th grade, offering a college-preparatory curriculum rooted in a biblical worldview.</p></p><p>•Address: 101 W Northside Dr, Clinton, MS 39056</p><p>•Phone: (601) 910-5990</p></li></div>
+    <li><a href="https://www.dyslexia.mc.edu" target="_blank">Dyslexia Center</a></li>
+        <div class="Service-card2"><li><a href="https://www.dyslexia.mc.edu" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHATKENHnzaywqNXa5i5U7qTu0oMeIv7b0VlktgI1SDejrtdAzB5qSNvE&s=10" width="150px" height="150px" alt=""></a></li><li><p>•The Dyslexia Center at Mississippi College in Clinton, MS, provides evaluations, therapy, and professional development for individuals with dyslexia, using research-based, Orton-Gillingham techniques. It serves students and families across Mississippi with services like comprehensive evaluations, one-on-one therapy, and parent meetings, and also offers a Master of Education in Dyslexia Therapy. The center is part of the college's School of Education and is led by Director Jan Hankins. </p><p>•Address: 500 W Madison St, Clinton, MS 39056</p><p>•Phone: (601) 925-7649</p></li></div>
+   <li><a href="https://www.facebook.com/Kidz1stLevelLearning2/" target="_blank">Kidz 1st Level Learning Center II</a></li>
+        <div class="Service-card2"><li><a href="https://www.facebook.com/Kidz1stLevelLearning2/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxpylzb6_LlLulX3uwbTzXxZWlIRDVkjT0u5bgneCJhFoYYPA8GaomEH4&s=10" height="150px" alt="" width="150px"></a></li><li><p>•Kidz 1st Level Learning Center II is a licensed child care facility located in Clinton, Mississippi. It is the second location of the "Kidz 1st" brand, which also operates a site in Pearl.</p></p><p>•Address: 724 Springridge Rd, clinton, MS 39056</p><p>•Phone: (601) 708-5077</p></li></div>
+
+
+
+</div>
+<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="childcare" class="tab-content2">
+    <h2>
+        Childcare services in Clinton, ms
+    </h2>
+    <li><a href="https://funtimeclinton.com" target="_blank">Funtime Pre-School of Clinton</a></li>
+        <div class="Service-card2"><li><a href="https://funtimeclinton.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweozzmX7sf02fQgW9Th0p7maXpYVSOZVxHLMFRi_JIgAEq6iXfB2qsK6vsV_DyvKCp0rqFx5zPGYqYzEoL2lU4hOz3JX6fxQwksyD9_HDxdr3qYMAQD8g7IjcqIxUMotjJAukCU6-w=s780-w780-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•Funtime Pre-School is a long-standing, licensed childcare and early childhood education provider in Clinton, Mississippi. Established in 1971, it has grown into a multi-facility operation that emphasizes a "premium level" of Christian-based care and academic preparation.</p></p><p>•Address: 400 Clinton Pkwy, Clinton, MS 39056</p><p>•Phone: (601) 925-5437</p></li></div>
+    <li><a href="https://funtimeclinton.com" target="_blank">My First Funtime</a></li>
+        <div class="Service-card2"><li><a href="https://funtimeclinton.com"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnTInQcTM5tzyHnn0-3pBrXpDsmVPJ_UCHfA&s" alt="" height="150px" width="150px"></a></li><li><p>•My First Funtime is the specialized infant and toddler division of the broader Funtime Pre-School organization in Clinton, Mississippi. While the main Funtime campus handles older preschoolers, this facility is dedicated exclusively to the needs of the youngest learners(6 weeks to 18 months).</p></p><p>•Address: 457 E Northside Dr, Clinton, MS 39056</p><p>•Phone: (601) 708-1367</p></li></div>
+    <li><a href="https://funtimeclinton.com" target="_blank">Funtime After-School of Clinton, Inc.</a></li>
+        <div class="Service-card2"><li><a href="https://funtimeclinton.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweozVet8fY_rwMudQV1JzEAkm5vyqlVoHIi5BsNYCfofeMXvXR-QQ3bzqJ7tsXUCI7UIJqf8a5QxoWqTL1jG0EsziBzkiFIOrI0UHAndkEGzB0IX9InJejkWP8hwRrLfHlNM74bdSQ=s780-w780-h624-n-k-no" alt="" height="150px" width="150px"></a></li><li><p>•Funtime After-School is the specialized school-age division of the Funtime childcare organization in Clinton, Mississippi. Unlike the other two campuses which focus on early childhood, this location is specifically designed for older children, offering a blend of academic support and recreational activities.</p></p><p>•Address: 931 US-80, Clinton, MS 39056</p><p>•Phone: (601) 924-6500</p></li></div>
+    <li><a href="https://www.clintonpublicschools.com/departments/transportation/" target="_blank">Clinton Public School Transportation</a></li>
+        <div class="Service-card2"><li><a href="https://www.clintonpublicschools.com/departments/transportation/" target="_blank"><img src="https://www.clinton.k12.ma.us/ourpages/auto/2024/12/19/55697996/cps%20bus%20ifb.jpg" height="150px" width="150px" alt=""></a></li><li><p>•The Clinton Public School District (CPSD) Transportation Department is responsible for the safe transit of students across the city's 132-square-mile district. As of 2026, the department continues to operate with a focus on safety, efficiency, and maintaining a high standard for its fleet and personnel.</p></p><p>•Address: 519 Springridge Rd, Clinton, MS 39056</p><p>•Phone: (601) 924-7219</p></li></div>
+
+</div>
+    
+</body>
+</html>

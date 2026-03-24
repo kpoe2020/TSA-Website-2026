@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Clinton, MS Website</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    <style>
+        h1{color: darkorchid;}
+    </style>
+  <div id="return" class="tab-content">
+  <h1>Health and Pharmacy Services in Clinton, Mississippi</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+
+   <style>
+    /* Music Player Styles */
+        
+        .player {
+            margin-bottom: 30px;
+        }
+
+        .vinyl-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .vinyl-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            border: 5px solid #D98B19;
+            /* Animation setup */
+            animation: spin 3.5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        /* This triggers when the JS adds the 'spinning' class */
+        .vinyl.spinning {
+            animation-play-state: running;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #D98B19;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #D98B19;
+        }
+        #return{
+            padding-bottom: 30px;
+        }
+        #beauty{
+            padding-top: 30px;
+        }
+
+        
+
+      
+
+     
+
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+    
+     <audio id="audio" src="Adre .mp3" loop></audio>
+    <div class="disk" onclick="togglePlay()"></div>
+<div class="player">
+        <button id="vinylBtn" class="vinyl-btn" aria-label="play or pause music">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStETKqqNWSIrkpunU0Suje3fHPQubLaMTzBw&s" alt="Vinyl record" class="vinyl" id="vinyl" />
+            <span class="label" id="label">Click to Play</span>
+        </button>
+
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Adre .mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div class="Service-card3"><audio controls>
+  <source src="Adre .mp3" type="audio/mpeg" loop>
+  Your browser does not support the audio element.
+</audio>
+<a href="https://youtu.be/gqVahBlvrCc?si=OXW6ClfOrpdxvaU4" target="_blank">thanks for the beat Fxel</a>
+    </div>
+   <script>
+        // 1. Navigation Logic
+        function navigateToResource() {
+            const input = document.getElementById('resourceSearch');
+            const val = input.value;
+            const options = document.getElementById('resources').options;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === val) {
+                    window.open(options[i].getAttribute('data-url'), '_blank');
+                    return;
+                }
+            }
+            alert("Please select an item from the list.");
+        }
+
+        // 2. Music Player Logic
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    </script>    
+
+    <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="service" class="tab-content2">
+    <h2>
+       Health Services
+    </h2>
+         <li><a href="https://www.hcpls.org" target="_blank">Baptist Healthplex</a></li>
+             <div class="Service-card2"><li><a href="https://www.hcpls.org" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerKvYhjUJrBkorpGiF73qN3sUCoY225Pdbb4uNU32S2Dji5dDOSCG0oeOXOGcDPgd8aA0aczomGYAiiK2IvYfgukVI6DfPxoPw4oSorXyxi8F4j5UgnF16GFxnorYBPd7cz_EOt=s624-w618-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•Baptist Healthplex in Clinton, MS, is a premier 100,000-square-foot fitness and wellness center located on the campus of Mississippi College. It serves as a unique hybrid between a high-end commercial gym and a clinical wellness facility, often utilized by MC students, faculty, and the broader Clinton community.</p><p>•Address: 102 Clinton Pkwy, Clinton, MS 39056</p><p>•Phone: (601) 925-7900</p></li></div> 
+         <li><a href="https://www.animalhospitalclinton.com/" target="_blank">Animal Hospital of Clinton</a></li>
+            <div class="Service-card2"><li><a href="https://www.animalhospitalclinton.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfprXZgEc43JjfSrCiKO4wzeJz1h5h0_HPw&s" height="150px" width="150px" alt=""></a></li><li><p>The Animal Hospital of Clinton (AHOC) is a long-standing veterinary practice in Clinton, MS, established in 1994 by Dr. Richard Gill. It is known for blending traditional small-town care with modern surgical technology.</p><p>•Address: 497 Springridge Rd, Clinton, MS 39056</p><p>•Phone: (601) 924-4169</p></li></div> 
+         <li><a href="https://www.belllifesafety.com" target="_blank">Bell Life Safety</a></li>
+            <div class="Service-card2"><li><a href="https://www.belllifesafety.com" target="_blank"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/XRwE1BUFWy2Tf8UNvTxGoQ/l.jpg" height="150px" width="150px" alt=""></a></li><li><p>•Bell Life Safety, LLC in Clinton, MS, is a specialized health and safety training provider and medical equipment supplier. It is widely recognized for offering American Heart Association (AHA) certified training to both medical professionals and the general public.</p><p>•Address: 119 Keith Ln, Clinton, MS 39056</p><p>•Phone: (601) 926-0690</p></li></div> 
+        <li><a href="https://trustcarehealth.com/mental" target="_blank">Trust Care</a></li>
+            <div class="Service-card2"><li><a href="https://trustcarehealth.com/mental" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8mUjXKt3Hsm-aoB6YTMnJkzBKsXXck1zig&s"  height="150px" width="150px" alt="" ></a></li><li><p>•TrustCare in Clinton, MS, is a modern urgent care and walk-in clinic designed to bridge the gap between a primary care physician and an emergency room. It is a popular choice for residents and Mississippi College students who need medical attention outside of traditional office hours without the high costs of an ER visit.</p><p>•Address: 601 US-80, Clinton, MS 39056</p><p>•Phone: (601) 708-1480</p></li></div> 
+
+
+</div>
+<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="Wellness" class="tab-content2">
+    <h2>
+       Mental Health Services 
+    </h2>
+     <li><a href="https://redrivercounseling.net/newclients?gad_source=1&gad_campaignid=21000471558&gbraid=0AAAAAC8rwbWAQGiWA2ZZ4RUrQUntEq0xZ&gclid=Cj0KCQiA8KTNBhD_ARIsAOvp6DJv6gZ0Q2lE9xkLGTY5x43qH_R8fHlNaMw2HQJbbccWnFld9HAhk_YaAnSPEALw_wcB" target="_blank">Red River Counseling - Mississippi</a></li>
+        <div class="Service-card2"><li><a href="https://redrivercounseling.net/newclients?gad_source=1&gad_campaignid=21000471558&gbraid=0AAAAAC8rwbWAQGiWA2ZZ4RUrQUntEq0xZ&gclid=Cj0KCQiA8KTNBhD_ARIsAOvp6DJv6gZ0Q2lE9xkLGTY5x43qH_R8fHlNaMw2HQJbbccWnFld9HAhk_YaAnSPEALw_wcB" target="_blank"><img src="https://static1.squarespace.com/static/58ecefb0414fb58fde5d2142/t/5b3c0cfe6d2a7346fab37af4/1530662165339/Branden+Henry+Logo+for+social.jpg?format=1500w"  height="150px" width="150px" alt=""></a></li><li><p>•Red River Counseling is a private mental health group in Mississippi that describes its mission through three pillars: Recover, Heal, and Empower. Founded by Dr. Branden Henry, the practice is known for its "trail guide" philosophy, helping clients navigate through seasons of pain, addiction, and relational conflict. While their primary physical office is in Ridgeland, they are a major provider for the Clinton area through both in-person sessions and robust telehealth options.</p><p>•Address: 14 Professional Pkwy, Ridgeland, MS 39157</p><p>•Phone: (601) 780-7400</p></li></div> 
+    <li><a href="https://standforhope.org" target="_blank">The Center for Children and Families: Counseling Services</a></li>
+            <div class="Service-card2"><li><a href="https://standforhope.org" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8W7NAOG41bpz5GK5SnKecEXieQI5f3xJkSw&s" height="150px" width="150px" alt=""></a></li><li><p>•The Center for Children and Families (sometimes listed as the Southern Center for Children and Families) is a prominent non-profit organization in Clinton, MS, dedicated to providing specialized mental health and advocacy services for youth and their caregivers. They are particularly recognized for their "mobile" approach, often bringing therapy directly to the environments where children feel most comfortable.</p><p>•Address: 604 Hwy 80 W, Clinton, MS 39056</p><p>•Phone: (601) 473-2106</p></li></div>  
+
+
+</div>
+<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="dentist" class="tab-content2">
+    <h2>Dental Offices in Clinton, MS</h2>
+    <li><a href="https://www.mattkchowdds.com" target="_blank">Parkway Dental Of Clinton</a></li>
+        <div class="Service-card2"><li><a href="https://www.mattkchowdds.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqpRWSpRg1npAxD9hKKI4NtyGEpUioWdhbr59SwEt7BowP0MTho2Oe4YvFmC-nlUrOwK1giUED-RuL6O1MeKQn2G68Wr3e90ySsS8LxPXF-LkR_gXHpFM6xvHChSS6N_-RzDDpxbw=s294-w294-h220-n-k-no" width="150px" height="150px" alt=""></a></li><li><p>•Parkway Dental of Clinton is a full-service family dental practice located in Clinton, MS, led by Dr. Matthew K. Chow, DDS. The clinic is known for integrating modern dental technology, such as same-day crowns, into a community-focused atmosphere.</p><p>•Address: 401 Clinton Pkwy, Clinton, MS 39056</p><p>•Phone: (601) 924-8478</p></li></div> 
+    <li><a href="https://www.northsidedentalgroup.com" target="_blank">Northside Dental Group</a></li>
+       <div class="Service-card2"><li><a href="https://www.northsidedentalgroup.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerzCftdVR3w8Y3ywoBuJMTz4zTwJkWk1W3dfrd7BcwBdGF8_Cx9Wx3GMNdet69JZKFGD08XrmpU89dKsv4NcCRdwJm23Cx72QkQr0QhwL0Ik5ZSSKyNrTAWW6clAfn0il_FLSDuSml7EI4J=s294-w294-h220-n-k-no" width="150px" height="150px" alt=""></a></li><li><p>•Northside Dental Group in Clinton, MS, is a comprehensive family dental practice known for its "relationship-focused" approach. Led by Dr. David Henry and Dr. Stephen Greer, the clinic emphasizes a gentle, compassionate environment designed to put both children and adults at ease.</p><p>•Address: 550 E Northside Dr, Clinton, MS 39056</p><p>•Phone: (601) 924-1555</p></li></div> 
+    <li><a href="https://www.afdclinton.com" target="_blank">Alford Family Denistry</a></li>
+        <div class="Service-card2"><li><a href="https://www.afdclinton.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo3LpvhtmN1BAePx6Kaj6MDlGsglqqRSKWLDaT_uxCSqUgONQEvAB9kxeE67-a5iAWw8Iyj1UBaXOxhucJ6AdjAraW9WIyjklW_x8c4YpePf8yempkFgKGR6zclxs9Y4H3gQscc=s963-w963-h624-n-k-no" height="150px" alt="" width="150px"></a></li><li><p>Alford Family Dentistry is a boutique-style, patient-centered dental practice in Clinton, MS, led by Dr. Blaire Alford, DMD. The practice is known for its "non-corporate" feel, where the staff emphasizes personal relationships and high-comfort amenities.</p><p>•Address: 380 US-80, Clinton, MS 39056</p><p>•Phone: (601) 925-4727</p></li></div> 
+
+
+</div>
+<img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" height="5px" width="30px">
+<div id="Pharmacy" class="tab-content2">
+    <h2>Pharmacies in Clinton, Mississippi</h2>
+    <li><a href="https://www.clintonpharmacyms.com" target="_blank">Clinton Pharmacy</a></li>
+            <div class="Service-card2"><li><a href="https://www.clintonpharmacyms.com" target="_blank"><img src="https://static.spacecrafted.com/f350aec8e67e4f00b5ef53418c73a948/i/a3fe40e3b99c4bf8959658c301340255/1/5feFb8zhrk/clinton_logo.png" height="150px" alt="" width="150px"></a></li><li><p>•Clinton Pharmacy is a locally-owned, independent pharmacy in Clinton, MS, known for its "small-town" service model. Unlike larger corporate chains, it emphasizes personal relationships, efficiency, and a transparent approach to healthcare.</p><p>•Address: 210 Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 924-0439</p></li></div>
+    <li><a href="https://www.cvs.com/pharmacy?cid=ps_cor_txt_cs_as_nb&gclsrc=aw.ds&gad_source=1&gad_campaignid=19278628792&gclid=CjwKCAiAtq_NBhA_EiwA78nNWBtzJqYRio53edIW2rhQPBjlCQmRwzrePDbV5hniqMrVISg802kkzRoCRugQAvD_BwE" target="_blank">CVS Pharmacy</a></li>
+        <div class="Service-card2"><li><a href="https://www.cvs.com/pharmacy?cid=ps_cor_txt_cs_as_nb&gclsrc=aw.ds&gad_source=1&gad_campaignid=19278628792&gclid=CjwKCAiAtq_NBhA_EiwA78nNWBtzJqYRio53edIW2rhQPBjlCQmRwzrePDbV5hniqMrVISg802kkzRoCRugQAvD_BwE" target="_blank"><img src="https://mallmaverick.imgix.net/web/property_managers/85/properties/919/all/20240119153227/cvs-pharmacy-logo-stacked.png" height="150px" alt="" width="150px"></a></li><li><p>•CVS Pharmacy in Clinton, MS, is a primary national retail pharmacy known for its wide range of over-the-counter products, convenience items, and full-service pharmacy department. It is a frequent choice for residents who value the integration with Aetna/Caremark insurance and the benefits of the ExtraCare rewards program.</p><p>•Address: 801 Highway 80 East, Clinton, MS 39056.</p><p>•Phone (601) 924-2111</p></li></div>
+    <li><a href="https://www.walgreens.com/locator/walgreens-204+highway+80+e-clinton-ms-39056/id=5165" target="_blank">Walgreens Pharmacy</a></li>
+            <div class="Service-card2"><li><a href="https://www.walgreens.com/locator/walgreens-204+highway+80+e-clinton-ms-39056/id=5165" target="_blank"><img src="https://images.seeklogo.com/logo-png/28/3/walgreens-logo-png_seeklogo-289091.png" height="150px" alt="" width="150px"></a></li><li><p>•Walgreens Pharmacy in Clinton, MS, is a major retail health hub known for its high level of accessibility. It is the only pharmacy in the immediate Clinton area that traditionally offers 24-hour retail services, making it a critical resource for late-night needs.</p><p>•Address: 204 Highway 80 East, Clinton, MS 39056 (at the corner of Springridge Rd and Hwy 80).</p><p>•Phone (601) 926-1179</p></li></div>
+    <li><a href="https://www.kroger.com/stores/pharmacy/ms/clinton/025/00474" target="_blank">Kroger Pharmacy</a></li>
+            <div class="Service-card2"><li><a href="https://www.kroger.com/stores/pharmacy/ms/clinton/025/00474" target="_blank"><img src="https://cdn.prod.website-files.com/5ea6e33b808bdfb8b29b0ceb/5ed288c06103a38927e7c955_5ed27caaef82ae9d5e7c6a72_KROGER-PHARMACY.jpeg" height="150px" alt="" width="150px"></a></li><li><p>•Kroger Pharmacy in Clinton, MS, is a high-volume retail pharmacy integrated into the city's main Kroger supermarket. It is a popular choice for residents who prefer to consolidate their grocery shopping and healthcare needs into a single trip.</p><p>•Address: 107 Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 925-6343</p></li></div>
+    <li><a href="https://www.parkwaypharmacyclinton.com" target="_blank">Parkway Pharmacy</a></li>
+           <div class="Service-card2"><li><a href="https://www.parkwaypharmacyclinton.com" target="_blank"><img src="https://images.squarespace-cdn.com/content/v1/5b097b8445776ee022eee4e5/1532315643336-2S9D7VZL3D13MRO6JC00/Logo-Stacked.png" height="150px" alt="" width="150px"></a></li><li><p>•Parkway Pharmacy in Clinton, MS, is a family-owned, independent pharmacy located on the north side of the city. Known for its "mom and pop" atmosphere, it offers a personalized alternative to the large retail chains found on Highway 80.</p><p>•Address: 134 E Northside Dr, Clinton, MS 39056</p><p>•Phone: (601) 924-8935</p></li></div>
+    <li><a href="https://www.walmart.com/store/1710-clinton-ms/pharmacy/?veh=seo_loc" target="_blank">Walmart Pharmacy</a></li>
+            <div class="Service-card2"><li><a href="https://www.walmart.com/store/1710-clinton-ms/pharmacy/?veh=seo_loc" target="_blank"><img src="https://play-lh.googleusercontent.com/-JmDao1bvMJLL-zhMtTbtsZiba8_wjeUh5OZJ5rZsfKmEf32vU2twW2_Pt-MLygJ14I" height="150px" alt="" width="150px"></a></li><li><p>•Walmart Pharmacy in Clinton, MS, is a high-volume retail pharmacy located inside the Clinton Supercenter. It is widely known for its affordability and is a go-to for residents who use Walmart's famous $4 Prescriptions program or seek the convenience of one-stop shopping.</p><p>•Address: 950 Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 924-8778</p></li></div>
+
+
+
+
+
+</div>
+    
+</body>
+</html>
