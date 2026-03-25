@@ -5,18 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services in Clinton, MS Website</title>
       <link rel="stylesheet" href="style.css">
-</head>
-<body>
-      <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
-    <style>
-        h1{color: darkorchid;}
-    </style>
-  <div id="return" class="tab-content">
-  <h1>Banks</h1>
-  <p>
-  <a href="index.html"> return </a>
-  </p>
-</div>
 <style>
     /* Music Player Styles */
         
@@ -77,7 +65,7 @@
 
       
 
-     
+      h1{color: darkorchid;}
 
 
         @keyframes spin {
@@ -85,6 +73,50 @@
             to { transform: rotate(360deg); }
         }
     </style>
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Click to Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                    alert("Click again to play!");
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    });   
+    </script>  
+    </head>
+<body>
+      <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    
+  <div id="return" class="tab-content">
+  <h1>Banks</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
    
       <audio id="audio" src="nimb33.mp3" loop></audio>
     <div class="disk" onclick="togglePlay()"></div>
@@ -104,52 +136,7 @@
 </audio>
 <a href="https://youtu.be/LJh832MPuoA?si=4fbeET0uUGO0Tytu" target="_blank">Thanks for letting me use your music @nimb33.</a>
     </div>
-<script>
-        // 1. Navigation Logic
-        function navigateToResource() {
-            const input = document.getElementById('resourceSearch');
-            const val = input.value;
-            const options = document.getElementById('resources').options;
-
-            for (let i = 0; i < options.length; i++) {
-                if (options[i].value === val) {
-                    window.open(options[i].getAttribute('data-url'), '_blank');
-                    return;
-                }
-            }
-            alert("Please select an item from the list.");
-        }
-
-        // 2. Music Player Logic
-        const btn = document.getElementById("vinylBtn");
-        const vinyl = document.getElementById("vinyl");
-        const label = document.getElementById("label");
-        const music = document.getElementById("bgMusic");
-
-        function setPlayingUI(isPlaying) {
-            if (isPlaying) {
-                vinyl.classList.add("spinning");
-                label.textContent = "Pause";
-            } else {
-                vinyl.classList.remove("spinning");
-                label.textContent = "Play";
-            }
-        }
-
-        btn.addEventListener("click", async () => {
-            if (music.paused) {
-                try {
-                    await music.play();
-                    setPlayingUI(true);
-                } catch (err) {
-                    console.error("Playback failed:", err);
-                }
-            } else {
-                music.pause();
-                setPlayingUI(false);
-            }
-        });
-    </script>    
+  
         <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-white-pencil-icon-image_1344872.jpg" width="100%" height="5px">
 
     <div id="banks" class="tab-content2">

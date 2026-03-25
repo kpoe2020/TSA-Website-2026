@@ -6,24 +6,7 @@
     <title>Services in Clinton, MS Website</title>
     <link rel="stylesheet" href="style.css">
    <script src="script3.js"></script>
-</head>
-<body>
-  <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
-    <style>
-        h1{color: darkorchid;}
-    </style>
-  <div id="return" class="tab-content">
-  <h1>return</h1>
-  <p>
-  <a href="index.html"> return </a>
-  </p>
-</div>
-<div id="service" class="tab-content">
-    <h1>
-        All the services in Clinton, Mississippi
-    </h1>
-</div>
-   <style>
+ <style>
     /* Music Player Styles */
         
         .player {
@@ -85,7 +68,7 @@
     } 
 
      
-
+   h1{color: darkorchid;}
 
         @keyframes spin {
             from { transform: rotate(0deg); }
@@ -93,6 +76,55 @@
         }
     </style>
 
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Click to Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                    alert("Click again to play!");
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    });   </script>    
+
+</head>
+<body>
+  <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
+    
+  <div id="return" class="tab-content">
+  <h1>return</h1>
+  <p>
+  <a href="index.html"> return </a>
+  </p>
+</div>
+<div id="service" class="tab-content">
+    <h1>
+        All the services in Clinton, Mississippi
+    </h1>
+</div>
+  
 
     <audio id="audio" src="ICEe.mp3" loop></audio>
     <div class="disk" onclick="togglePlay()"></div>
@@ -114,52 +146,6 @@
 </audio>
 <a href="https://youtu.be/LJh832 MPuoA?si=4fbeET0uUGO0Tytu" target="_blank">Thanks for letting me use your music @ICEe_music.</a>
     </div>
-<script>
-        // 1. Navigation Logic
-        function navigateToResource() {
-            const input = document.getElementById('resourceSearch');
-            const val = input.value;
-            const options = document.getElementById('resources').options;
-
-            for (let i = 0; i < options.length; i++) {
-                if (options[i].value === val) {
-                    window.open(options[i].getAttribute('data-url'), '_blank');
-                    return;
-                }
-            }
-            alert("Please select an item from the list.");
-        }
-
-        // 2. Music Player Logic
-        const btn = document.getElementById("vinylBtn");
-        const vinyl = document.getElementById("vinyl");
-        const label = document.getElementById("label");
-        const music = document.getElementById("bgMusic");
-
-        function setPlayingUI(isPlaying) {
-            if (isPlaying) {
-                vinyl.classList.add("spinning");
-                label.textContent = "Pause";
-            } else {
-                vinyl.classList.remove("spinning");
-                label.textContent = "Play";
-            }
-        }
-
-        btn.addEventListener("click", async () => {
-            if (music.paused) {
-                try {
-                    await music.play();
-                    setPlayingUI(true);
-                } catch (err) {
-                    console.error("Playback failed:", err);
-                }
-            } else {
-                music.pause();
-                setPlayingUI(false);
-            }
-        });
-    </script>    
     <nav>
   
    <div class="service-container">

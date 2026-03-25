@@ -73,11 +73,9 @@ a{
 }
 
      body{
-        border-color: #ddd;
-        border-radius: 25px;
-        border-style: solid;
+     
         display:grid;
-        border-width: 2.5px;
+   
         width: 100%;
 
     }

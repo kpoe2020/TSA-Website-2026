@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services in Clinton, MS Website</title>
-      <link rel="stylesheet" href="style.css"></head>
-<body>
-      <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" width="100%" height="1000px">
-    <style>
+      <link rel="stylesheet" href="style.css">
+    
+     <style>
         h1{color: darkorchid;}
     /* Music Player Styles */
         
@@ -80,6 +79,43 @@
             to { transform: rotate(360deg); }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Click to Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                    alert("Click again to play!");
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    });  
+      </script>    
+    </head>
+<body>
+      <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" width="100%" height="1000px">
+   
   <div id="return" class="tab-content">
   <h1>Barbershops and Salons in Clinton, MS</h1>
   <p>
@@ -128,52 +164,7 @@
     <li><a href="https://Fivestarspa.favesalon.com" target="_blank">Five Star & Nail</a></li>
         <div class="Service-card2"><li><a href="https://Fivestarspa.favesalon.com" target="_blank"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerzPAvJYcwHk5ZaG_HkYh6q_i3oEdT07y4HD1Lr71bLyiWqidPz_8D5ili-7d1uxck3dzOXsK3DXQvOhsL3qGpZXM2qfgjapuDrnaWZlkIgrTd6cZr78MSsfcmJKfQWX3huPls_AKr_LztH=s624-w498-h624-n-k-no" height="150px" width="150px" alt=""></a></li><li><p>•Five Star Spa & Nails (often referred to simply as Five Star Nails) is a established full-service beauty and wellness destination in Clinton, Mississippi. Located on Highway 80, it is known for providing a comprehensive "one-stop-shop" experience that spans from basic nail maintenance to advanced medical spa treatments</p><p>•Address: Highway 80 East, Clinton, MS 39056</p><p>•Phone: (601) 924-9757</p></li></div>
 </div>
-<script>
-        // 1. Navigation Logic
-        function navigateToResource() {
-            const input = document.getElementById('resourceSearch');
-            const val = input.value;
-            const options = document.getElementById('resources').options;
 
-            for (let i = 0; i < options.length; i++) {
-                if (options[i].value === val) {
-                    window.open(options[i].getAttribute('data-url'), '_blank');
-                    return;
-                }
-            }
-            alert("Please select an item from the list.");
-        }
-
-        // 2. Music Player Logic
-        const btn = document.getElementById("vinylBtn");
-        const vinyl = document.getElementById("vinyl");
-        const label = document.getElementById("label");
-        const music = document.getElementById("bgMusic");
-
-        function setPlayingUI(isPlaying) {
-            if (isPlaying) {
-                vinyl.classList.add("spinning");
-                label.textContent = "Pause";
-            } else {
-                vinyl.classList.remove("spinning");
-                label.textContent = "Play";
-            }
-        }
-
-        btn.addEventListener("click", async () => {
-            if (music.paused) {
-                try {
-                    await music.play();
-                    setPlayingUI(true);
-                } catch (err) {
-                    console.error("Playback failed:", err);
-                }
-            } else {
-                music.pause();
-                setPlayingUI(false);
-            }
-        });
-    </script>    
 
 </body>
 </html>

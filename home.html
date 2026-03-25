@@ -63,7 +63,11 @@
 
   
 
-
+   h1{color: darkorchid;}
+        #return h1{          
+        display: flex;
+            align-items: center;
+            justify-content: center}
       
 
      
@@ -75,16 +79,43 @@
         }
  
     </style>
+       <script>
+              document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("vinylBtn");
+        const vinyl = document.getElementById("vinyl");
+        const label = document.getElementById("label");
+        const music = document.getElementById("bgMusic");
+
+        function setPlayingUI(isPlaying) {
+            if (isPlaying) {
+                vinyl.classList.add("spinning");
+                label.textContent = "Pause";
+            } else {
+                vinyl.classList.remove("spinning");
+                label.textContent = "Click to Play";
+            }
+        }
+
+        btn.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    setPlayingUI(true);
+                } catch (err) {
+                    console.error("Playback failed:", err);
+                    alert("Click again to play!");
+                }
+            } else {
+                music.pause();
+                setPlayingUI(false);
+            }
+        });
+    });  
+        </script>
+
 </head>
 <body>
   <img id="clinton" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/ClintonMSWelcomeSign.jpg" alt="" srcset="" width="100%" height="1000px">
-    <style>
-        h1{color: darkorchid;}
-        #return h1{          
-        display: flex;
-            align-items: center;
-            justify-content: center}
-    </style>
   <div id="return" class="tab-content">
   <h1>The history of Clinton, MS</h1>
   <p>
@@ -111,53 +142,7 @@
 </audio>
 
     <a href="https://youtu.be/AMBE3uJOS1c?si=IPMjAgbqoO-wmfEc" target="_blank">Thanks for letting me use your music (Prod. 99LA)</a></div>
-    <script>
-        // 1. Navigation Logic
-        function navigateToResource() {
-            const input = document.getElementById('resourceSearch');
-            const val = input.value;
-            const options = document.getElementById('resources').options;
-
-            for (let i = 0; i < options.length; i++) {
-                if (options[i].value === val) {
-                    window.open(options[i].getAttribute('data-url'), '_blank');
-                    return;
-                }
-            }
-            alert("Please select an item from the list.");
-        }
-
-        // 2. Music Player Logic
-        const btn = document.getElementById("vinylBtn");
-        const vinyl = document.getElementById("vinyl");
-        const label = document.getElementById("label");
-        const music = document.getElementById("bgMusic");
-
-        function setPlayingUI(isPlaying) {
-            if (isPlaying) {
-                vinyl.classList.add("spinning");
-                label.textContent = "Pause";
-            } else {
-                vinyl.classList.remove("spinning");
-                label.textContent = "Play";
-            }
-        }
-
-        btn.addEventListener("click", async () => {
-            if (music.paused) {
-                try {
-                    await music.play();
-                    setPlayingUI(true);
-                } catch (err) {
-                    console.error("Playback failed:", err);
-                }
-            } else {
-                music.pause();
-                setPlayingUI(false);
-            }
-        });
-    </script>
-
+ 
 
 <div id="servicE" class="tab-content">
     <h1>Start of Clinton, MS</h1>
@@ -187,8 +172,8 @@
 </div>
 <div id="Modern day historic moments" class="tab-content">
     <h1>Modern Day</h1>
-   <li><p>•Mississippi, is a historic yet progressive city of approximately 27,000 residents located just west of the state capital, Jackson. Known as "One of America’s Great Hometowns," it is defined by its top-rated school system, the presence of Mississippi College, and a commitment to preserving its "Olde Towne" charm.</p>
-    <p>•Rising Spring: Is a new mall being constructed on I-20 and US HWY 80 with it estimated to cost $200 million dollars</p>
+   <li><p>•Clinton, Mississippi is a historic yet progressive city of approximately 27,000 residents located just west of the state capital, Jackson. Known as "One of America’s Great Hometowns," it is defined by its top-rated school system, the presence of Mississippi College, and a commitment to preserving its "Olde Towne" charm.</p>
+   <p>•Rising Spring: Is a new mall being constructed on I-20 and US HWY 80 with it estimated to cost $200 million dollars</p>
     <p>•TSA: won first place for audio podcasting in the District Convention</p>
     <p>•School Threat: In Feburay 2026, a 12-year old was arrested for making threats on social media against Clinton Junior High and Sumner Hill Junior High School</p>
         <p>•WorldCom scandal: WorldCom started in Hattiesburg, Mississippi, in 1983 as Long distance Discount Service, but later moved on to have its headquarters in Clinton, MS. The company got into trouble  for overstating its assets by over $11 billion, because it would turn everyday bills into longterm investments. The company later filed for banksruptcy in 2003. It was such a big event because at the time it the largest accounting fraud in American history at that time. </p>
@@ -197,8 +182,7 @@
     <li><p>•Rosemary Aultman, served as city mayor in 1993 all the way to 2013</p>
     <p>•Phil Fisher, was city mayor of Clinton, Mississippi in 2013 to 2025</p>
     <p>•Will Purdie, the current mayor of clinton, Mississippi</p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQSaeWKDJm8-hoYAIHieJwPy71h5x3ZbuAaQ&s" height="200px">
-    </li>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQSaeWKDJm8-hoYAIHieJwPy71h5x3ZbuAaQ&s" height="200px"></li>
 
 </div>
 
